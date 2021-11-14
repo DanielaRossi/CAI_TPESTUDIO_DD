@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace TPEstudio
 {
-    public partial class Form1 : Form
+    public partial class FrmLiquidaciones : Form
     {
-        public Form1()
+        public FrmLiquidaciones(Form propietario)
         {
+            this.Owner = propietario;
             InitializeComponent();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Hide();
         }
     }
 }
