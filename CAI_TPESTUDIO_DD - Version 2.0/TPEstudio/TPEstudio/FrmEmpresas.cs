@@ -12,10 +12,14 @@ namespace TPEstudio
 {
     public partial class FrmEmpresas : Form
     {
+
+        private FrmIngresarNuevaEmpresa _frmIngresarNuevaEmpresa;
         public FrmEmpresas(Form propietario)
         {
             this.Owner= propietario;
             InitializeComponent();
+            _frmIngresarNuevaEmpresa = new FrmIngresarNuevaEmpresa();
+            _frmIngresarNuevaEmpresa.Owner = this;
         }
 
         private void FrmEmpresas_Load(object sender, EventArgs e)
@@ -28,6 +32,12 @@ namespace TPEstudio
             this.Owner.Show();
             this.Hide();
             
+        }
+
+        private void _btnIngresarEmpresa_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            _frmIngresarNuevaEmpresa.Show();
         }
     }
 }

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B4BA5EE-CA6D-472B-A319-81A16123E5EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TPEstudio</RootNamespace>
+    <AssemblyName>TPEstudio</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategorias.Designer.cs">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpresas.Designer.cs">
+      <DependentUpon>FrmEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarCategoria.Designer.cs">
+      <DependentUpon>FrmIngresarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarEmpleado.Designer.cs">
+      <DependentUpon>FrmIngresarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarLiquidacion.Designer.cs">
+      <DependentUpon>FrmIngresarLiquidacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarNuevaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarNuevaEmpresa.Designer.cs">
+      <DependentUpon>FrmIngresarNuevaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaster.Designer.cs">
+      <DependentUpon>FrmMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLiquidaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLiquidaciones.Designer.cs">
+      <DependentUpon>FrmLiquidaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCategorias.resx">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpresas.resx">
+      <DependentUpon>FrmEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarCategoria.resx">
+      <DependentUpon>FrmIngresarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarEmpleado.resx">
+      <DependentUpon>FrmIngresarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarLiquidacion.resx">
+      <DependentUpon>FrmIngresarLiquidacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarNuevaEmpresa.resx">
+      <DependentUpon>FrmIngresarNuevaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLiquidaciones.resx">
+      <DependentUpon>FrmLiquidaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaster.resx">
+      <DependentUpon>FrmMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TPEstudio.Entidades\TPEstudio.Entidades.csproj">
+      <Project>{7f97fe29-bcf7-4441-9953-73b1cd244757}</Project>
+      <Name>TPEstudio.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPEstudio.Negocio\TPEstudio.Negocio.csproj">
+      <Project>{81fc4cfc-604b-4963-8bc4-6c4e86662287}</Project>
+      <Name>TPEstudio.Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

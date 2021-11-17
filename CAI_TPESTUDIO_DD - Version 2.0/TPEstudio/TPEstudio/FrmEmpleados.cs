@@ -12,10 +12,16 @@ namespace TPEstudio
 {
     public partial class FrmEmpleados : Form
     {
+
+        private FrmIngresarEmpleado _frmIngresarEmpleado;
         public FrmEmpleados(Form propietario)
         {
             InitializeComponent();
             this.Owner = propietario;
+            _frmIngresarEmpleado = new FrmIngresarEmpleado();
+            _frmIngresarEmpleado.Owner = this;
+            
+            
         }
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
@@ -27,6 +33,12 @@ namespace TPEstudio
         {
             this.Owner.Show();
             this.Hide();
+        }
+
+        private void _btnIngresarNuevoEmpleado_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            _frmIngresarEmpleado.Show();
         }
     }
 }

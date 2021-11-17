@@ -12,16 +12,27 @@ namespace TPEstudio
 {
     public partial class FrmLiquidaciones : Form
     {
+        private FrmIngresarLiquidacion _frmIngresarLiquidacion;
         public FrmLiquidaciones(Form propietario)
         {
             this.Owner = propietario;
             InitializeComponent();
+            _frmIngresarLiquidacion = new FrmIngresarLiquidacion();
+            _frmIngresarLiquidacion.Owner = this;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
             this.Hide();
+        }
+
+        private void _btnIngresarLiquidacion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            _frmIngresarLiquidacion.Show();
+
+
         }
     }
 }

@@ -12,10 +12,15 @@ namespace TPEstudio
 {
     public partial class FrmCategorias : Form
     {
+
+        private FrmIngresarCategoria _frmIngresarCategoria;
         public FrmCategorias(Form propietario)
         {
             this.Owner = propietario;
             InitializeComponent();
+            _frmIngresarCategoria = new FrmIngresarCategoria();
+            _frmIngresarCategoria.Owner = this;
+
         }
 
         private void FrmCategorias_Load(object sender, EventArgs e)
@@ -27,6 +32,12 @@ namespace TPEstudio
         {
             this.Owner.Show();
             this.Hide();
+        }
+
+        private void _btnIngresarCategoria_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            _frmIngresarCategoria.Show();
         }
     }
 }

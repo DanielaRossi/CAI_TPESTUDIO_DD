@@ -37,7 +37,7 @@ namespace TPEstudio
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(473, 294);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(83, 38);
             this.btnVolver.TabIndex = 0;
@@ -54,6 +54,7 @@ namespace TPEstudio
             this._btnIngresarEmpresa.TabIndex = 1;
             this._btnIngresarEmpresa.Text = "Ingresar nueva empresa";
             this._btnIngresarEmpresa.UseVisualStyleBackColor = true;
+            this._btnIngresarEmpresa.Click += new System.EventHandler(this._btnIngresarEmpresa_Click);
             // 
             // _btnConsultarEmpresas
             // 
@@ -73,7 +74,7 @@ namespace TPEstudio
             this.Controls.Add(this._btnConsultarEmpresas);
             this.Controls.Add(this._btnIngresarEmpresa);
             this.Controls.Add(this.btnVolver);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmEmpresas";
             this.Text = "Empresas";
             this.Load += new System.EventHandler(this.FrmEmpresas_Load);

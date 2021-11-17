@@ -37,7 +37,7 @@ namespace TPEstudio
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(474, 289);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(93, 28);
             this.btnVolver.TabIndex = 0;
@@ -54,6 +54,7 @@ namespace TPEstudio
             this._btnIngresarCategoria.TabIndex = 1;
             this._btnIngresarCategoria.Text = "Ingresar Categoria";
             this._btnIngresarCategoria.UseVisualStyleBackColor = true;
+            this._btnIngresarCategoria.Click += new System.EventHandler(this._btnIngresarCategoria_Click);
             // 
             // _btnConsultarCategoria
             // 
@@ -73,7 +74,7 @@ namespace TPEstudio
             this.Controls.Add(this._btnConsultarCategoria);
             this.Controls.Add(this._btnIngresarCategoria);
             this.Controls.Add(this.btnVolver);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCategorias";
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.FrmCategorias_Load);
