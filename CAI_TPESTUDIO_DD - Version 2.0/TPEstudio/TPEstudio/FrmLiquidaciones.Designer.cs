@@ -37,7 +37,7 @@ namespace TPEstudio
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(481, 288);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(65, 20);
             this.btnVolver.TabIndex = 0;
@@ -54,6 +54,7 @@ namespace TPEstudio
             this._btnIngresarLiquidacion.TabIndex = 1;
             this._btnIngresarLiquidacion.Text = "Ingresar liquidacion";
             this._btnIngresarLiquidacion.UseVisualStyleBackColor = true;
+            this._btnIngresarLiquidacion.Click += new System.EventHandler(this._btnIngresarLiquidacion_Click);
             // 
             // _btnConsultarLiquidacion
             // 
@@ -73,7 +74,7 @@ namespace TPEstudio
             this.Controls.Add(this._btnConsultarLiquidacion);
             this.Controls.Add(this._btnIngresarLiquidacion);
             this.Controls.Add(this.btnVolver);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmLiquidaciones";
             this.Text = "Liquidaciones";
             this.ResumeLayout(false);
