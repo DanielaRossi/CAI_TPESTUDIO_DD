@@ -113,6 +113,7 @@ namespace TPEstudio
             this._btnAgregar.TabIndex = 8;
             this._btnAgregar.Text = "Agregar";
             this._btnAgregar.UseVisualStyleBackColor = true;
+            this._btnAgregar.Click += new System.EventHandler(this._btnAgregar_Click);
             // 
             // _btnVolver
             // 
