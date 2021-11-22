@@ -45,6 +45,7 @@ namespace TPEstudio
             this.textBox6 = new System.Windows.Forms.TextBox();
             this._btnAgregar = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.Button();
+            this._lstLiquidaciones = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // _lblId
@@ -179,11 +180,20 @@ namespace TPEstudio
             this._btnVolver.UseVisualStyleBackColor = true;
             this._btnVolver.Click += new System.EventHandler(this._btnVolver_Click);
             // 
+            // _lstLiquidaciones
+            // 
+            this._lstLiquidaciones.FormattingEnabled = true;
+            this._lstLiquidaciones.Location = new System.Drawing.Point(489, 70);
+            this._lstLiquidaciones.Name = "_lstLiquidaciones";
+            this._lstLiquidaciones.Size = new System.Drawing.Size(318, 251);
+            this._lstLiquidaciones.TabIndex = 16;
+            // 
             // FrmIngresarLiquidacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 450);
+            this.ClientSize = new System.Drawing.Size(833, 450);
+            this.Controls.Add(this._lstLiquidaciones);
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._btnAgregar);
             this.Controls.Add(this.textBox6);
@@ -202,6 +212,7 @@ namespace TPEstudio
             this.Controls.Add(this._lblId);
             this.Name = "FrmIngresarLiquidacion";
             this.Text = "FrmIngresarLiquidacion";
+            this.Load += new System.EventHandler(this.FrmIngresarLiquidacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +236,6 @@ namespace TPEstudio
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button _btnAgregar;
         private System.Windows.Forms.Button _btnVolver;
+        private System.Windows.Forms.ListBox _lstLiquidaciones;
     }
 }

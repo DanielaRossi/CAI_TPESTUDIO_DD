@@ -34,5 +34,10 @@ namespace TPEstudio
 
 
         }
+
+        private void FrmLiquidaciones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

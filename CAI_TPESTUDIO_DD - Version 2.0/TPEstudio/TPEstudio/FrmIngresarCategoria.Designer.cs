@@ -39,6 +39,7 @@ namespace TPEstudio
             this._cmbIdCategoria = new System.Windows.Forms.ComboBox();
             this._btnAgregar = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.Button();
+            this._lstCategorias = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // _lblId
@@ -126,11 +127,21 @@ namespace TPEstudio
             this._btnVolver.UseVisualStyleBackColor = true;
             this._btnVolver.Click += new System.EventHandler(this._btnVolver_Click);
             // 
+            // _lstCategorias
+            // 
+            this._lstCategorias.FormattingEnabled = true;
+            this._lstCategorias.Location = new System.Drawing.Point(443, 78);
+            this._lstCategorias.Name = "_lstCategorias";
+            this._lstCategorias.Size = new System.Drawing.Size(201, 173);
+            this._lstCategorias.TabIndex = 10;
+            this._lstCategorias.SelectedIndexChanged += new System.EventHandler(this._lstCategorias_SelectedIndexChanged);
+            // 
             // FrmIngresarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 450);
+            this.ClientSize = new System.Drawing.Size(719, 450);
+            this.Controls.Add(this._lstCategorias);
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._btnAgregar);
             this.Controls.Add(this._cmbIdCategoria);
@@ -143,6 +154,7 @@ namespace TPEstudio
             this.Controls.Add(this._lblId);
             this.Name = "FrmIngresarCategoria";
             this.Text = "FrmIngresarCategoria";
+            this.Load += new System.EventHandler(this.FrmIngresarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +172,6 @@ namespace TPEstudio
         private System.Windows.Forms.ComboBox _cmbIdCategoria;
         private System.Windows.Forms.Button _btnAgregar;
         private System.Windows.Forms.Button _btnVolver;
+        private System.Windows.Forms.ListBox _lstCategorias;
     }
 }
