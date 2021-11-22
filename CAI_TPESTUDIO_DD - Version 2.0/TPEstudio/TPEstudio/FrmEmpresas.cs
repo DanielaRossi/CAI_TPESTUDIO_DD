@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TPEstudio.Negocio;
+
+using TPEstudio.Entidades;
 
 namespace TPEstudio
 {
     public partial class FrmEmpresas : Form
     {
+
+
 
         private FrmIngresarNuevaEmpresa _frmIngresarNuevaEmpresa;
         public FrmEmpresas(Form propietario)
@@ -24,9 +29,10 @@ namespace TPEstudio
 
         private void FrmEmpresas_Load(object sender, EventArgs e)
         {
-
+            
         }
 
+        
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Owner.Show();

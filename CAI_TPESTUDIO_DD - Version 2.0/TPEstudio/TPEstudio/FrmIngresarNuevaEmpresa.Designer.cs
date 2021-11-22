@@ -39,6 +39,7 @@ namespace TPEstudio
             this.label1 = new System.Windows.Forms.Label();
             this._btnAgregar = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.Button();
+            this._lstEmpresas = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // _lblRazonSocial
@@ -125,11 +126,22 @@ namespace TPEstudio
             this._btnVolver.UseVisualStyleBackColor = true;
             this._btnVolver.Click += new System.EventHandler(this._btnVolver_Click);
             // 
+            // _lstEmpresas
+            // 
+            this._lstEmpresas.AccessibleName = "_lstEmpresas";
+            this._lstEmpresas.FormattingEnabled = true;
+            this._lstEmpresas.Location = new System.Drawing.Point(412, 93);
+            this._lstEmpresas.Name = "_lstEmpresas";
+            this._lstEmpresas.Size = new System.Drawing.Size(256, 225);
+            this._lstEmpresas.TabIndex = 10;
+            this._lstEmpresas.SelectedIndexChanged += new System.EventHandler(this.ListaEmpresas_SelectedIndexChanged);
+            // 
             // FrmIngresarNuevaEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 450);
+            this.ClientSize = new System.Drawing.Size(711, 450);
+            this.Controls.Add(this._lstEmpresas);
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._btnAgregar);
             this.Controls.Add(this._txtDomicilio);
@@ -142,6 +154,7 @@ namespace TPEstudio
             this.Controls.Add(this._lblRazonSocial);
             this.Name = "FrmIngresarNuevaEmpresa";
             this.Text = "FrmIngresarNuevaEmpresa";
+            this.Load += new System.EventHandler(this.FrmIngresarNuevaEmpresa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +172,6 @@ namespace TPEstudio
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button _btnAgregar;
         private System.Windows.Forms.Button _btnVolver;
+        private System.Windows.Forms.ListBox _lstEmpresas;
     }
 }

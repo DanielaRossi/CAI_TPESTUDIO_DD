@@ -39,6 +39,7 @@ namespace TPEstudio
             this._txtDni = new System.Windows.Forms.TextBox();
             this._btnAgregar = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.Button();
+            this._lstEmpleados = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // _lblNombre
@@ -124,11 +125,20 @@ namespace TPEstudio
             this._btnVolver.UseVisualStyleBackColor = true;
             this._btnVolver.Click += new System.EventHandler(this._btnVolver_Click);
             // 
+            // _lstEmpleados
+            // 
+            this._lstEmpleados.FormattingEnabled = true;
+            this._lstEmpleados.Location = new System.Drawing.Point(370, 72);
+            this._lstEmpleados.Name = "_lstEmpleados";
+            this._lstEmpleados.Size = new System.Drawing.Size(237, 212);
+            this._lstEmpleados.TabIndex = 10;
+            // 
             // FrmIngresarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 369);
+            this.ClientSize = new System.Drawing.Size(640, 369);
+            this.Controls.Add(this._lstEmpleados);
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._btnAgregar);
             this.Controls.Add(this._txtDni);
@@ -141,6 +151,7 @@ namespace TPEstudio
             this.Controls.Add(this._lblNombre);
             this.Name = "FrmIngresarEmpleado";
             this.Text = "FrmIngresarEmpleado";
+            this.Load += new System.EventHandler(this.FrmIngresarEmpleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +169,6 @@ namespace TPEstudio
         private System.Windows.Forms.TextBox _txtDni;
         private System.Windows.Forms.Button _btnAgregar;
         private System.Windows.Forms.Button _btnVolver;
+        private System.Windows.Forms.ListBox _lstEmpleados;
     }
 }
