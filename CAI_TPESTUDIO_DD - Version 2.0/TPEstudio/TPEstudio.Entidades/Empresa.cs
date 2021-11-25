@@ -20,13 +20,17 @@ namespace TPEstudio.Entidades
         public string Domicilio { get => _domicilio; set => _domicilio = value; }
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
 
-        public Empresa(int id, string razonSocial, long cuit, string domicilio, DateTime fechaAlta)
+        public Empresa( string razonSocial, long cuit, string domicilio)
         {
-            _id = id;
+            
             _razonSocial = razonSocial;
             _cuit = cuit;
             _domicilio = domicilio;
-            _fechaAlta = fechaAlta;
+            
+        }
+        public override string ToString()
+        {
+            return string.Format("{0}),{1}-{2}", this.Id, this.RazonSocial, this._cuit);
         }
     }
 }

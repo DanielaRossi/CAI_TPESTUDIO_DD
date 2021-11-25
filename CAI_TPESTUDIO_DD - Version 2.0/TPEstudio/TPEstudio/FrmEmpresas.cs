@@ -14,12 +14,15 @@ namespace TPEstudio
     {
 
         private FrmIngresarNuevaEmpresa _frmIngresarNuevaEmpresa;
+        private FrmConsultarEmpresa _frmConsultarEmpresa;
+
         public FrmEmpresas(Form propietario)
         {
             this.Owner= propietario;
             InitializeComponent();
             _frmIngresarNuevaEmpresa = new FrmIngresarNuevaEmpresa();
             _frmIngresarNuevaEmpresa.Owner = this;
+            _frmConsultarEmpresa = new FrmConsultarEmpresa(this);
         }
 
         private void FrmEmpresas_Load(object sender, EventArgs e)
@@ -38,6 +41,12 @@ namespace TPEstudio
         {
             this.Hide();
             _frmIngresarNuevaEmpresa.Show();
+        }
+
+        private void _btnConsultarEmpresas_Click(object sender, EventArgs e)
+        {
+            _frmConsultarEmpresa.Show();
+            this.Hide();
         }
     }
 }
