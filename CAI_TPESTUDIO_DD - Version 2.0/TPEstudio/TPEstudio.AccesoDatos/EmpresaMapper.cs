@@ -26,19 +26,20 @@ namespace TPEstudio.AccesoDatos
         public TransactionResult Insertar(Empresa empresa)
         {
             NameValueCollection obj = ReverseMap(empresa);
-            string json = WebHelper.Post("empresa", obj);
-                TransactionResult lst= JsonConvert.DeserializeObject<TransactionResult>(json);
+            string json = WebHelper.Post("Empresa", obj);
+            TransactionResult lst= JsonConvert.DeserializeObject<TransactionResult>(json);
                 
             return lst;
         }
         public NameValueCollection ReverseMap(Empresa empresa)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("razonSocial", empresa.RazonSocial);
-            n.Add("cuit", empresa.Cuit.ToString());
-            n.Add("domicilio", empresa.Domicilio);
-                n.Add("fechaAlta", DateTime.Now.ToString());
-            n.Add("usuario", "880671");
+            n.Add("RazonSocial", empresa.RazonSocial);
+            n.Add("Cuit", empresa.Cuit.ToString());
+            n.Add("Domicilio", empresa.Domicilio);
+            n.Add("Id", empresa.Id.ToString());
+            n.Add("FechaAlta", DateTime.Now.ToString());
+            n.Add("Usuario", "880671");
             return n;
 
         }

@@ -13,9 +13,9 @@ namespace TPEstudio.Entidades
         private string _convenio;
         private double _sueldoBasico;
 
-        public Categoria(int id, string nombre, string convenio, double sueldoBasico)
+        public Categoria(string nombre, string convenio, double sueldoBasico)
         {
-            _id = id;
+           
             _nombre = nombre;
             _convenio = convenio;
             _sueldoBasico = sueldoBasico;

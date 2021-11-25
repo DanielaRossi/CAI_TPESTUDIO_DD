@@ -62,7 +62,7 @@ namespace TPEstudio
             // _txtRazonSocial
             // 
             this._txtRazonSocial.Location = new System.Drawing.Point(201, 114);
-            this._txtRazonSocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._txtRazonSocial.Margin = new System.Windows.Forms.Padding(4);
             this._txtRazonSocial.Name = "_txtRazonSocial";
             this._txtRazonSocial.Size = new System.Drawing.Size(132, 22);
             this._txtRazonSocial.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace TPEstudio
             // _txtCuit
             // 
             this._txtCuit.Location = new System.Drawing.Point(201, 172);
-            this._txtCuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._txtCuit.Margin = new System.Windows.Forms.Padding(4);
             this._txtCuit.Name = "_txtCuit";
             this._txtCuit.Size = new System.Drawing.Size(132, 22);
             this._txtCuit.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace TPEstudio
             // _txtDomicilio
             // 
             this._txtDomicilio.Location = new System.Drawing.Point(201, 239);
-            this._txtDomicilio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._txtDomicilio.Margin = new System.Windows.Forms.Padding(4);
             this._txtDomicilio.Name = "_txtDomicilio";
             this._txtDomicilio.Size = new System.Drawing.Size(132, 22);
             this._txtDomicilio.TabIndex = 7;
@@ -96,7 +96,7 @@ namespace TPEstudio
             // _btnAgregar
             // 
             this._btnAgregar.Location = new System.Drawing.Point(349, 350);
-            this._btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this._btnAgregar.Name = "_btnAgregar";
             this._btnAgregar.Size = new System.Drawing.Size(100, 28);
             this._btnAgregar.TabIndex = 8;
@@ -107,7 +107,7 @@ namespace TPEstudio
             // _btnVolver
             // 
             this._btnVolver.Location = new System.Drawing.Point(349, 404);
-            this._btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(100, 28);
             this._btnVolver.TabIndex = 9;
@@ -128,9 +128,10 @@ namespace TPEstudio
             this.Controls.Add(this._txtRazonSocial);
             this.Controls.Add(this._lblCuit);
             this.Controls.Add(this._lblRazonSocial);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmIngresarNuevaEmpresa";
             this.Text = "FrmIngresarNuevaEmpresa";
+            this.Load += new System.EventHandler(this.FrmIngresarNuevaEmpresa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

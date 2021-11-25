@@ -21,7 +21,7 @@ namespace TPEstudio.Negocio
         {
             return empresaMapper.Traer();
         }
-        public TransactionResult Alta(string razon, long cuit, string domicilio)
+        public void Alta(string razon, long cuit, string domicilio)
         {
             Empresa e = new Empresa(razon, cuit, domicilio);
 
@@ -31,7 +31,7 @@ namespace TPEstudio.Negocio
             {
                 throw new Exception("Error al dar de alta. Detalle: " + result.Error);
             }
-            return result;
+            
         }
               
     }

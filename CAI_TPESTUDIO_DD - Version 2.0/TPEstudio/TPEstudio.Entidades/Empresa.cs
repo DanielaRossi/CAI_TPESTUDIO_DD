@@ -30,7 +30,7 @@ namespace TPEstudio.Entidades
         }
         public override string ToString()
         {
-            return string.Format("{0}),{1}-{2}", this.Id, this.RazonSocial, this._cuit);
+            return $"{this.Id}) {this.RazonSocial} {this.Cuit}";
         }
     }
 }
