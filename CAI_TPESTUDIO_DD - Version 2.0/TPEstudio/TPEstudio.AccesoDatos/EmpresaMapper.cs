@@ -13,7 +13,7 @@ namespace TPEstudio.AccesoDatos
     {
         public List<Empresa> Traer()
         {
-            string json = WebHelper.Get("Empresa/880671");
+            string json = WebHelper.Get("/EstudioContable/Empresas/880671");
             List < Empresa > lst = MapList(json);
             return lst;
         }
@@ -26,21 +26,21 @@ namespace TPEstudio.AccesoDatos
         public TransactionResult Insertar(Empresa empresa)
         {
             NameValueCollection obj = ReverseMap(empresa);
-            string json = WebHelper.Post("Empresa", obj);
+            string json = WebHelper.Post("/EstudioContable/Empresa", obj);
             TransactionResult lst= JsonConvert.DeserializeObject<TransactionResult>(json);
                 
             return lst;
         }
         public NameValueCollection ReverseMap(Empresa empresa)
         {
-            NameValueCollection n = new NameValueCollection();
-            n.Add("RazonSocial", empresa.RazonSocial);
-            n.Add("Cuit", empresa.Cuit.ToString());
-            n.Add("Domicilio", empresa.Domicilio);
-            n.Add("Id", empresa.Id.ToString());
-            n.Add("FechaAlta", DateTime.Now.ToString());
-            n.Add("Usuario", "880671");
-            return n;
+            NameValueCollection nv = new NameValueCollection();
+            nv.Add("razonSocial", empresa.RazonSocial);
+            nv.Add("cuit", empresa.Cuit.ToString());
+            nv.Add("domicilio", empresa.Domicilio);
+            nv.Add("id", empresa.Id.ToString());
+            nv.Add("fechaAlta", DateTime.Now.ToString());
+            nv.Add("usuario", "880671");
+            return nv;
 
         }
        

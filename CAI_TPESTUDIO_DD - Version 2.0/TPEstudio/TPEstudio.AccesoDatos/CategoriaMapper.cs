@@ -13,7 +13,7 @@ namespace TPEstudio.AccesoDatos
     {
         public List<Categoria> Traer()
         {
-            string json = WebHelper.Get("Categoria/880671");
+            string json = WebHelper.Get("/EstudioContable/Categorias/880671");
             List<Categoria> lst = MapList(json);
             return lst;
         }
@@ -26,7 +26,7 @@ namespace TPEstudio.AccesoDatos
         public TransactionResult Insertar(Categoria categoria)
         {
             NameValueCollection obj =  MapRever(categoria);
-            string json= WebHelper.Post("Categoria", obj);
+            string json= WebHelper.Post("/EstudioContable/Categoria", obj);
             TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
             return lst;
                 

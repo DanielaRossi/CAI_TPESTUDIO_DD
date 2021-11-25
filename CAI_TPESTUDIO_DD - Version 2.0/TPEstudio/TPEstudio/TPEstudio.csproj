@@ -52,6 +52,12 @@
     <Compile Include="FrmCategorias.Designer.cs">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultarCategoria.Designer.cs">
+      <DependentUpon>FrmConsultarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConsultarEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCategorias.resx">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultarCategoria.resx">
+      <DependentUpon>FrmConsultarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultarEmpresa.resx">
       <DependentUpon>FrmConsultarEmpresa.cs</DependentUpon>
