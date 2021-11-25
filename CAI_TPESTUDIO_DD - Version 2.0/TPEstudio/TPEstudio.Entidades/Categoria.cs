@@ -25,5 +25,11 @@ namespace TPEstudio.Entidades
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Convenio { get => _convenio; set => _convenio = value; }
         public double SueldoBasico { get => _sueldoBasico; set => _sueldoBasico = value; }
+
+        public override string ToString()
+        {
+            return $"{this._id}){this.Convenio}-{this._nombre}-Sueldo Basico{this._sueldoBasico.ToString("0.00")}";
+
+        }
     }
 }
