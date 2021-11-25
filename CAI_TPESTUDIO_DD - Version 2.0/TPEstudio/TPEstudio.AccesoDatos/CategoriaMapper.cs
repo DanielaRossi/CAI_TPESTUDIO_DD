@@ -13,7 +13,7 @@ namespace TPEstudio.AccesoDatos
     {
         public List<Categoria> Traer()
         {
-            string json = WebHelper.Get("/EstudioContable/Categorias/880671");
+            string json = WebHelper.Get("/EstudioContable/Categorias");
             List<Categoria> lst = MapList(json);
             return lst;
         }
