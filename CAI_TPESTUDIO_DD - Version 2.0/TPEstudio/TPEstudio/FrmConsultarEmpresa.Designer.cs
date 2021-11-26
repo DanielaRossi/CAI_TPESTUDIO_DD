@@ -31,6 +31,8 @@ namespace TPEstudio
         {
             this.button1 = new System.Windows.Forms.Button();
             this.lstEmpresas = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCantidadempresas = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -52,17 +54,37 @@ namespace TPEstudio
             this.lstEmpresas.Size = new System.Drawing.Size(512, 324);
             this.lstEmpresas.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(603, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Cantidad de empresas";
+            // 
+            // txtCantidadempresas
+            // 
+            this.txtCantidadempresas.Enabled = false;
+            this.txtCantidadempresas.Location = new System.Drawing.Point(606, 130);
+            this.txtCantidadempresas.Name = "txtCantidadempresas";
+            this.txtCantidadempresas.Size = new System.Drawing.Size(120, 22);
+            this.txtCantidadempresas.TabIndex = 3;
+            // 
             // FrmConsultarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCantidadempresas);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lstEmpresas);
             this.Controls.Add(this.button1);
             this.Name = "FrmConsultarEmpresa";
             this.Text = "FrmConsultarEmpresa";
             this.Load += new System.EventHandler(this.FrmConsultarEmpresa_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -70,5 +92,7 @@ namespace TPEstudio
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox lstEmpresas;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCantidadempresas;
     }
 }

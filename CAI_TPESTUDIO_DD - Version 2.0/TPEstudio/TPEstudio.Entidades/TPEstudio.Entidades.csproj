@@ -49,6 +49,7 @@
     <Compile Include="Enums\ConvenioEnum.cs" />
     <Compile Include="Expection\SueldoBasicoFueraLimiteExpection.cs" />
     <Compile Include="Liquidaciones.cs" />
+    <Compile Include="OperadorEmpresas.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransactionResult.cs" />

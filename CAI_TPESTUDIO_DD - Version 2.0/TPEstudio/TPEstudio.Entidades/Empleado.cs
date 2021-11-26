@@ -17,16 +17,15 @@ namespace TPEstudio.Entidades
         private DateTime _fechaAlta;
         private bool _activo;
 
-        public Empleado(int idEmpleado, int idEmpresa, int idCategoria, long cuil, DateTime fechanacimeinto, DateTime fechaalta, bool activo, int id, string nombre, string apellido, string direccion, long telefono, string mail) : base(id, nombre, apellido, direccion, telefono, mail)
+        public Empleado(int idEmpresa, int idCategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
         {
-            this._idEmpleado = idEmpleado;
+
             this._idCategoria = idCategoria;
             this._idEmpresa = idEmpresa;
             this._cuil = cuil;
             this._fechaNacimiento = fechanacimeinto;
-            this._fechaAlta = fechaalta;
-            this._activo = activo;
         }
+            
 
         public int IdEmpleado { get => _idEmpleado; set => _idEmpleado = value; }
         public int IdEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
@@ -36,5 +35,10 @@ namespace TPEstudio.Entidades
         public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public bool Activo { get => _activo; set => _activo = value; }
+
+        public override string ToString()
+        {
+            return $"{this._idCategoria},{this._idEmpresa},{this._cuil},{this._fechaNacimiento}";
+        }
     }
 }

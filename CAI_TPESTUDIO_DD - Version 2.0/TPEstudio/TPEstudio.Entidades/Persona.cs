@@ -15,14 +15,12 @@ namespace TPEstudio.Entidades
         private long _telefono;
         private string _mail;
 
-        public Persona(int id, string nombre, string apellido, string direccion, long telefono, string mail)
+        public Persona(string nombre, string apellido)
         {
-            _id = id;
+           
             _nombre = nombre;
             _apellido = apellido;
-            _direccion = direccion;
-            _telefono = telefono;
-            _mail = mail;
+            
         }
 
         public int Id { get => _id; set => _id = value; }

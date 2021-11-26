@@ -15,23 +15,36 @@ namespace TPEstudio
     public partial class FrmConsultarEmpresa : Form
     {
         private EmpresaNegocio _empresaNegocio;
+        private OperadorEmpresas _operadorEmpresa;
+        private List<Empresa> _empresas;
         public FrmConsultarEmpresa(Form propietario)
         {
             InitializeComponent();
             this.Owner = propietario;
             _empresaNegocio = new EmpresaNegocio();
+            
+            _operadorEmpresa = new OperadorEmpresas(_empresas);
         }
 
         private void FrmConsultarEmpresa_Load(object sender, EventArgs e)
         {
+            _empresas = _empresaNegocio.TraerTodas();
             lstEmpresas.DataSource = null;
-            lstEmpresas.DataSource = _empresaNegocio.TraerTodas();
+            lstEmpresas.DataSource = _empresas;
+            
+            CargarDatos();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
             this.Hide();
+        }
+        private void CargarDatos()
+        {
+            
+            txtCantidadempresas.Text = _operadorEmpresa.Cantidad.ToString();
         }
     }
 }

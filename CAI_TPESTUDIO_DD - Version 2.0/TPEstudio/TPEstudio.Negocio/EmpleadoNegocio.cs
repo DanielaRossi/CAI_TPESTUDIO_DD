@@ -19,9 +19,15 @@ namespace TPEstudio.Negocio
         {
             return _empleadoMapper.Traer();
         }
-        public void Alta(int categoria,int empresa, long cuit,string nombre,string apellido, DateTime fechaNacimiento)
+        public void Alta(Categoria categoria,Empresa empresa, long cuit,string nombre,string apellido, DateTime fechanacimiento)
         {
+            Empleado empleado = new Empleado(empresa.Id, categoria.Id,cuit, nombre, apellido, fechanacimiento);
+            TransactionResult result = _empleadoMapper.Insertar(empleado);
+            if(!result.IsOk)
+            {
+                throw new Exception("No se puede dar de alta el empleado por" + result.Error);
 
+            }
         }
     }
 }
