@@ -16,6 +16,7 @@ namespace TPEstudio.Entidades
         private DateTime _fechaNacimiento;
         private DateTime _fechaAlta;
         private bool _activo;
+        private Liquidaciones _liquidacion;
         
 
         public Empleado(int idEmpresa, int idCategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
@@ -27,7 +28,7 @@ namespace TPEstudio.Entidades
             this._fechaNacimiento = fechanacimeinto;
         }
             
-
+        public Liquidaciones Liq { get => _liquidacion; set => _liquidacion = value; }
         public int IdEmpleado { get => _idEmpleado; set => _idEmpleado = value; }
         public int IdEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
         public int IdCategoria { get => _idCategoria; set => _idCategoria = value; }

@@ -10,13 +10,13 @@ namespace TPEstudio.Entidades
     {
         private int _id;
         private int _idEmpleado;
-        private int _codigoTransferencia;
+        private string _codigoTransferencia;
         private int _periodo;
         private double _bruto;
         private double _descuentos;
         private DateTime _fechaAlta;
 
-        public Liquidaciones( int idEmpleado, int codigoTransferencia, int periodo, double bruto, double descuentos)
+        public Liquidaciones( int idEmpleado, string codigoTransferencia, int periodo, double bruto, double descuentos)
         {
             
             _idEmpleado = idEmpleado;
@@ -29,7 +29,7 @@ namespace TPEstudio.Entidades
 
         public int Id { get => _id; set => _id = value; }
         public int IdEmpleado { get => _idEmpleado; set => _idEmpleado = value; }
-        public int CodigoTransferencia { get => _codigoTransferencia; set => _codigoTransferencia = value; }
+        public string CodigoTransferencia { get => _codigoTransferencia; set => _codigoTransferencia = value; }
         public int Periodo { get => _periodo; set => _periodo = value; }
         public double Bruto { get => _bruto; set => _bruto = value; }
         public double Descuentos { get => _descuentos; set => _descuentos = value; }

@@ -26,10 +26,10 @@ namespace TPEstudio.Negocio
             
             return liquidacionesMapper.TraerporidLiquidación(idLiquidacion);
         }
-        public void Alta(int idempleado, int periodo, int codigo, double bruto, double descuentos)
+        public void Alta(int idempleado, int periodo, string codigo, double bruto, double descuentos)
         {
 
-            Liquidaciones l = new Liquidaciones(idempleado,periodo, codigo, bruto, descuentos);
+            Liquidaciones l = new Liquidaciones(idempleado, codigo, periodo, bruto, descuentos);
 
             TransactionResult result = liquidacionesMapper.Insertar(l);
 

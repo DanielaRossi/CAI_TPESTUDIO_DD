@@ -60,45 +60,23 @@ namespace TPEstudio
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    _listaliquidaciones = _liquidacionesNegocio.TraerTodas();
-            //    _empleados = _empleadoNegocio.TraerTodos();
-            //    foreach (Liquidaciones l in _listaliquidaciones)
-            //    {
-            //        if (l.IdEmpleado == cmbLiquidacion.SelectedIndex)
-            //        {
-            //            foreach (Empleado em in _empleados)
-            //            {
-            //                if (em.IdEmpleado == l.IdEmpleado)
-            //                {
-            //                    txtResultado.Text = em.ToString();
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            
+            
             try
             {
-                _listaliquidaciones = _liquidacionesNegocio.TraerTodas();
+                Liquidaciones id = (Liquidaciones)cmbLiquidacion.SelectedItem;
                 _empleados = _empleadoNegocio.TraerTodos();
-                foreach (Liquidaciones l in _listaliquidaciones)
-                {
-                    if (l.Id == cmbLiquidacion.SelectedIndex)
-                    {
+                
+                   
                         foreach (Empleado em in _empleados)
                         {
-                            if (em.IdEmpleado == l.IdEmpleado)
+                            if (em.Liq == id)
                             {
                                 txtResultado.Text = em.ToString();
                             }
                         }
-                    }
-                }
+                    
+                
             }
             catch (Exception ex)
             {
@@ -112,28 +90,20 @@ namespace TPEstudio
         {
             try
             {
-                _listaliquidaciones = _liquidacionesNegocio.TraerTodas();
+                Empresa empresa= (Empresa)cmbEmpresa.SelectedItem;
                 _empresas = _empresaNegocio.TraerTodas();
-                foreach (Liquidaciones l in _listaliquidaciones)
-                {
-                    if (l.Id == cmbLiquidacion.SelectedIndex)
-                    {
-                        foreach (Empleado em in _empleados)
+                _empleados = _empleadoNegocio.TraerTodos();
+
+                foreach (Empleado em in _empleados)
                         {
-                            if (em.IdEmpleado == l.IdEmpleado)
+                            if (em.IdEmpresa == empresa.Id)
                             {
-                                foreach(Empresa a in _empresas)
-                                {
-                                    if(a.Id == em.IdEmpresa)
-                                    {
-                                        
-                                    }
-                                }
+                                //como lo sumo a una lista
                                 
                             }
                         }
-                    }
-                }
+                    
+                
             }
             catch(Exception ex)
             {

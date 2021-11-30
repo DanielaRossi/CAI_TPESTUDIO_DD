@@ -46,8 +46,8 @@ namespace TPEstudio
         {
             try
             {
-                int codigotransferencia = 0;
-                Validaciones.ValidarInt(txtCodigoTransferencia.Text, ref codigotransferencia);
+                string codigotransferencia = txtCodigoTransferencia.Text;
+                Validaciones.ValidarVacio(codigotransferencia,"Codigo de transferencia");
                 double bruto = 0;
 
 
