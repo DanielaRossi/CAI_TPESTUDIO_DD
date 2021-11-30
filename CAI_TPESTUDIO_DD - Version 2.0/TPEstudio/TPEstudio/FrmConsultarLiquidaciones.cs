@@ -15,12 +15,14 @@ namespace TPEstudio
     public partial class FrmConsultarLiquidaciones : Form
     {
         private LiquidacionesNegocio liquidacionesNegocio;
+        private CategoriaNegocio categoriaNegocio;
         
         public FrmConsultarLiquidaciones(Form propietario)
         {
             InitializeComponent();
             this.Owner = propietario;
             liquidacionesNegocio = new LiquidacionesNegocio();
+            categoriaNegocio = new CategoriaNegocio();
         }
 
         private void FrmConsultarLiquidaciones_Load(object sender, EventArgs e)
@@ -35,6 +37,10 @@ namespace TPEstudio
             cmbLiquidacion.DataSource = liquidacionesNegocio.TraerTodas();
             cmbLiquidacion.DisplayMember = "Id";
             cmbLiquidacion.ValueMember = "Id";
+            cmbCategoria.DataSource = null;
+            cmbCategoria.DataSource = categoriaNegocio.TraerTodas();
+            cmbCategoria.DisplayMember = "NombreyConvenio";
+            cmbCategoria.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)

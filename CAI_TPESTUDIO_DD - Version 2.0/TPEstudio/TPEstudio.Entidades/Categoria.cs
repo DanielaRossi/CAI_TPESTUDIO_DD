@@ -31,5 +31,15 @@ namespace TPEstudio.Entidades
             return $"{this._id}){this.Convenio}-{this._nombre}-Sueldo Basico{this._sueldoBasico.ToString("0.00")}";
 
         }
+        public string NombreyConvenio
+        {
+            get
+            {
+                return $"{this._nombre}-{this._convenio}";
+            }
+        }
+        
+        
+
     }
 }
