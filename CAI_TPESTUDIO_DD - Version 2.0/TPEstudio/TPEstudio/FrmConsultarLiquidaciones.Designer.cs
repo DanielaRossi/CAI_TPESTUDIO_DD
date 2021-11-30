@@ -35,9 +35,9 @@ namespace TPEstudio
             this.label2 = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtidliquidación = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.cmbLiquidacion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lstLiquidaciones
@@ -95,14 +95,6 @@ namespace TPEstudio
             this.label3.TabIndex = 5;
             this.label3.Text = "Todas las liquidaciones";
             // 
-            // txtidliquidación
-            // 
-            this.txtidliquidación.Location = new System.Drawing.Point(251, 79);
-            this.txtidliquidación.Name = "txtidliquidación";
-            this.txtidliquidación.Size = new System.Drawing.Size(100, 22);
-            this.txtidliquidación.TabIndex = 6;
-            this.txtidliquidación.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(251, 138);
@@ -122,14 +114,23 @@ namespace TPEstudio
             this.label4.TabIndex = 8;
             this.label4.Text = "Resultado de la consulta";
             // 
+            // cmbLiquidacion
+            // 
+            this.cmbLiquidacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLiquidacion.FormattingEnabled = true;
+            this.cmbLiquidacion.Location = new System.Drawing.Point(251, 82);
+            this.cmbLiquidacion.Name = "cmbLiquidacion";
+            this.cmbLiquidacion.Size = new System.Drawing.Size(121, 24);
+            this.cmbLiquidacion.TabIndex = 9;
+            // 
             // FrmConsultarLiquidaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbLiquidacion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtidliquidación);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label2);
@@ -152,8 +153,8 @@ namespace TPEstudio
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtidliquidación;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbLiquidacion;
     }
 }

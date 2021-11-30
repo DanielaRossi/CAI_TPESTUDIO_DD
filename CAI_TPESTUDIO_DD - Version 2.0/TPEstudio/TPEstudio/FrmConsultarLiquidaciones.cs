@@ -15,6 +15,7 @@ namespace TPEstudio
     public partial class FrmConsultarLiquidaciones : Form
     {
         private LiquidacionesNegocio liquidacionesNegocio;
+        
         public FrmConsultarLiquidaciones(Form propietario)
         {
             InitializeComponent();
@@ -25,7 +26,15 @@ namespace TPEstudio
         private void FrmConsultarLiquidaciones_Load(object sender, EventArgs e)
         {
             CargarLista();
+            CargarCombo();
 
+        }
+        private void CargarCombo()
+        {
+            cmbLiquidacion.DataSource = null;
+            cmbLiquidacion.DataSource = liquidacionesNegocio.TraerTodas();
+            cmbLiquidacion.DisplayMember = "Id";
+            cmbLiquidacion.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,8 +51,9 @@ namespace TPEstudio
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int idliquidacion = 0;
-            Validaciones.ValidarInt(txtidliquidación.Text, ref idliquidacion);
+            int idliquidacion = cmbLiquidacion.SelectedIndex;
+            
+            
             Liquidaciones l= liquidacionesNegocio.Traerporidliquidacion(idliquidacion);
             txtResultado.Text = l.ToString();
 
