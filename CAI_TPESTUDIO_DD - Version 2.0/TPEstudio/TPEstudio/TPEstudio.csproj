@@ -58,11 +58,23 @@
     <Compile Include="FrmConsultarCategoria.Designer.cs">
       <DependentUpon>FrmConsultarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultarEmpleados.Designer.cs">
+      <DependentUpon>FrmConsultarEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConsultarEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmConsultarEmpresa.Designer.cs">
       <DependentUpon>FrmConsultarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultarLiquidaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultarLiquidaciones.Designer.cs">
+      <DependentUpon>FrmConsultarLiquidaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEmpleados.cs">
       <SubType>Form</SubType>
@@ -120,8 +132,14 @@
     <EmbeddedResource Include="FrmConsultarCategoria.resx">
       <DependentUpon>FrmConsultarCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultarEmpleados.resx">
+      <DependentUpon>FrmConsultarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultarEmpresa.resx">
       <DependentUpon>FrmConsultarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultarLiquidaciones.resx">
+      <DependentUpon>FrmConsultarLiquidaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>

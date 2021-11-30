@@ -36,10 +36,10 @@ namespace TPEstudio
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(481, 288);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolver.Location = new System.Drawing.Point(641, 354);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(65, 20);
+            this.btnVolver.Size = new System.Drawing.Size(87, 25);
             this.btnVolver.TabIndex = 0;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -47,10 +47,10 @@ namespace TPEstudio
             // 
             // _btnIngresarLiquidacion
             // 
-            this._btnIngresarLiquidacion.Location = new System.Drawing.Point(132, 148);
-            this._btnIngresarLiquidacion.Margin = new System.Windows.Forms.Padding(2);
+            this._btnIngresarLiquidacion.Location = new System.Drawing.Point(176, 182);
+            this._btnIngresarLiquidacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnIngresarLiquidacion.Name = "_btnIngresarLiquidacion";
-            this._btnIngresarLiquidacion.Size = new System.Drawing.Size(130, 58);
+            this._btnIngresarLiquidacion.Size = new System.Drawing.Size(173, 71);
             this._btnIngresarLiquidacion.TabIndex = 1;
             this._btnIngresarLiquidacion.Text = "Ingresar liquidacion";
             this._btnIngresarLiquidacion.UseVisualStyleBackColor = true;
@@ -58,23 +58,24 @@ namespace TPEstudio
             // 
             // _btnConsultarLiquidacion
             // 
-            this._btnConsultarLiquidacion.Location = new System.Drawing.Point(345, 148);
-            this._btnConsultarLiquidacion.Margin = new System.Windows.Forms.Padding(2);
+            this._btnConsultarLiquidacion.Location = new System.Drawing.Point(460, 182);
+            this._btnConsultarLiquidacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnConsultarLiquidacion.Name = "_btnConsultarLiquidacion";
-            this._btnConsultarLiquidacion.Size = new System.Drawing.Size(130, 58);
+            this._btnConsultarLiquidacion.Size = new System.Drawing.Size(173, 71);
             this._btnConsultarLiquidacion.TabIndex = 2;
             this._btnConsultarLiquidacion.Text = "Consultar Liquidacion";
             this._btnConsultarLiquidacion.UseVisualStyleBackColor = true;
+            this._btnConsultarLiquidacion.Click += new System.EventHandler(this._btnConsultarLiquidacion_Click);
             // 
             // FrmLiquidaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this._btnConsultarLiquidacion);
             this.Controls.Add(this._btnIngresarLiquidacion);
             this.Controls.Add(this.btnVolver);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmLiquidaciones";
             this.Text = "Liquidaciones";
             this.ResumeLayout(false);

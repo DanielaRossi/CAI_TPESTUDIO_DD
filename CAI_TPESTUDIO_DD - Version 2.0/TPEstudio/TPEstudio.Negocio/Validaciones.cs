@@ -15,19 +15,7 @@ namespace TPEstudio.Negocio
                 throw new Exception("El campo" + Campo + " no debe estar vacio" + System.Environment.NewLine);
             }
         }
-        public static void ValidarInt(string Valor, ref int Salida)
-        {
-
-
-            if (!int.TryParse(Valor, out Salida))
-            {
-                throw new Exception("El valor debe ser númerico" + System.Environment.NewLine);
-            }
-            else if (Salida <= 0)
-            {
-                throw new Exception("El valor debe ser positivo" + System.Environment.NewLine);
-            }
-        }
+       
         public static void ValidarDouble(string Valor, ref double Salida)
         {
 
@@ -51,6 +39,32 @@ namespace TPEstudio.Negocio
             }
             return Salida;
 
+        }
+        public static void ValidarLong(string Valor, ref long Salida)
+        {
+
+
+            if (!long.TryParse(Valor, out Salida))
+            {
+                throw new Exception("El valor debe ser númerico" + System.Environment.NewLine);
+            }
+            else if (Salida <= 0)
+            {
+                throw new Exception("El valor debe ser positivo" + System.Environment.NewLine);
+            }
+        }
+        public static void ValidarInt(string Valor, ref int Salida)
+        {
+
+
+            if (!int.TryParse(Valor, out Salida))
+            {
+                throw new Exception("El valor debe ser númerico" + System.Environment.NewLine);
+            }
+            else if (Salida <= 0)
+            {
+                throw new Exception("El valor debe ser positivo" + System.Environment.NewLine);
+            }
         }
     }
 }

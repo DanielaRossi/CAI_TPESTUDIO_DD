@@ -30,7 +30,7 @@ namespace TPEstudio.Entidades
         }
         public override string ToString()
         {
-            return $"{this.Id}) {this.RazonSocial} {this.Cuit}";
+            return $"{this.Id}) {this.RazonSocial}- Cuil: {this.Cuit}-Domicilio: {this._domicilio}-Fecha de alta: { this._fechaAlta}";
         }
     }
 }

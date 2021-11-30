@@ -38,7 +38,7 @@ namespace TPEstudio.Entidades
 
         public override string ToString()
         {
-            return $"{this._idCategoria},{this._idEmpresa},{this._cuil},{this._fechaNacimiento}";
+            return $"IdEmpleado {this._idEmpleado} Categoria: {this._idCategoria},Empresa: {this._idEmpresa},Cuil: {this._cuil}";
         }
     }
 }

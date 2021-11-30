@@ -31,14 +31,18 @@ namespace TPEstudio
             try
             {
                 string razon = _txtRazonSocial.Text;
-                long cuit = Convert.ToInt64(_txtCuit.Text);
+                Validaciones.ValidarVacio(razon, " Razón social");
+                long cuit = 0;
+                Validaciones.ValidarLong(_txtCuit.Text, ref cuit);
                 string domicilio = _txtDomicilio.Text;
+                Validaciones.ValidarVacio(domicilio, " Domicilio");
                 _empresaNegocio.Alta(razon, cuit, domicilio);
+                MessageBox.Show("La empresa se agregó con exito.");
                 Limpiar();
             }
             catch(Exception ex)
             {
-                MessageBox.Show("No se puedo agregar la empresa");
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -51,7 +55,7 @@ namespace TPEstudio
 
         private void FrmIngresarNuevaEmpresa_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -23,14 +23,18 @@ namespace TPEstudio.Negocio
         }
         public void Alta(string razon, long cuit, string domicilio)
         {
-            Empresa e = new Empresa(razon, cuit, domicilio);
+            
+                Empresa e = new Empresa(razon, cuit, domicilio);
 
-            TransactionResult result = empresaMapper.Insertar(e);
+                TransactionResult result = empresaMapper.Insertar(e);
 
-            if (!result.IsOk)
-            {
-                throw new Exception("Error al dar de alta. Detalle: " + result.Error);
-            }
+                if (!result.IsOk)
+                {
+                    throw new Exception("Error al dar de alta. Detalle: " + result.Error);
+                }
+            
+            
+            
             
         }
               

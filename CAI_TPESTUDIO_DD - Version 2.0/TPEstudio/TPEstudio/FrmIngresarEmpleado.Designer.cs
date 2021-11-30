@@ -87,40 +87,40 @@ namespace TPEstudio
             // 
             // _txtNombre
             // 
-            this._txtNombre.Location = new System.Drawing.Point(206, 34);
-            this._txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._txtNombre.Location = new System.Drawing.Point(231, 34);
+            this._txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this._txtNombre.Name = "_txtNombre";
-            this._txtNombre.Size = new System.Drawing.Size(132, 22);
+            this._txtNombre.Size = new System.Drawing.Size(198, 22);
             this._txtNombre.TabIndex = 4;
             // 
             // _txtApellido
             // 
-            this._txtApellido.Location = new System.Drawing.Point(206, 72);
-            this._txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._txtApellido.Location = new System.Drawing.Point(231, 69);
+            this._txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this._txtApellido.Name = "_txtApellido";
-            this._txtApellido.Size = new System.Drawing.Size(132, 22);
+            this._txtApellido.Size = new System.Drawing.Size(198, 22);
             this._txtApellido.TabIndex = 5;
             // 
             // _txtLegajo
             // 
             this._txtLegajo.Location = new System.Drawing.Point(231, 122);
-            this._txtLegajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._txtLegajo.Margin = new System.Windows.Forms.Padding(4);
             this._txtLegajo.Name = "_txtLegajo";
-            this._txtLegajo.Size = new System.Drawing.Size(132, 22);
+            this._txtLegajo.Size = new System.Drawing.Size(198, 22);
             this._txtLegajo.TabIndex = 6;
             // 
             // _txtDni
             // 
-            this._txtDni.Location = new System.Drawing.Point(231, 166);
-            this._txtDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._txtDni.Location = new System.Drawing.Point(231, 163);
+            this._txtDni.Margin = new System.Windows.Forms.Padding(4);
             this._txtDni.Name = "_txtDni";
-            this._txtDni.Size = new System.Drawing.Size(132, 22);
+            this._txtDni.Size = new System.Drawing.Size(198, 22);
             this._txtDni.TabIndex = 7;
             // 
             // _btnAgregar
             // 
             this._btnAgregar.Location = new System.Drawing.Point(184, 389);
-            this._btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this._btnAgregar.Name = "_btnAgregar";
             this._btnAgregar.Size = new System.Drawing.Size(100, 50);
             this._btnAgregar.TabIndex = 8;
@@ -131,7 +131,7 @@ namespace TPEstudio
             // _btnVolver
             // 
             this._btnVolver.Location = new System.Drawing.Point(329, 389);
-            this._btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(100, 50);
             this._btnVolver.TabIndex = 9;
@@ -144,35 +144,36 @@ namespace TPEstudio
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(91, 223);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 17);
+            this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "IdCategoria";
+            this.label1.Text = "Categoria";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(91, 270);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 17);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 11;
-            this.label2.Text = "IdEmpresa";
+            this.label2.Text = "Empresa";
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(242, 223);
+            this.cmbCategoria.Location = new System.Drawing.Point(231, 216);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(121, 24);
+            this.cmbCategoria.Size = new System.Drawing.Size(198, 24);
             this.cmbCategoria.TabIndex = 12;
             // 
             // cmbEmpresa
             // 
             this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmpresa.FormattingEnabled = true;
-            this.cmbEmpresa.Location = new System.Drawing.Point(242, 296);
+            this.cmbEmpresa.Location = new System.Drawing.Point(231, 270);
             this.cmbEmpresa.Name = "cmbEmpresa";
-            this.cmbEmpresa.Size = new System.Drawing.Size(121, 24);
+            this.cmbEmpresa.Size = new System.Drawing.Size(198, 24);
             this.cmbEmpresa.TabIndex = 13;
             // 
             // FrmIngresarEmpleado
@@ -194,7 +195,7 @@ namespace TPEstudio
             this.Controls.Add(this._FECHA);
             this.Controls.Add(this._lblApellido);
             this.Controls.Add(this._lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmIngresarEmpleado";
             this.Text = "FrmIngresarEmpleado";
             this.Load += new System.EventHandler(this.FrmIngresarEmpleado_Load);

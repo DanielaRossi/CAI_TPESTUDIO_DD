@@ -52,8 +52,12 @@ namespace TPEstudio
         {
             cmbCategoria.DataSource = null;
             cmbCategoria.DataSource = _categoriaNegocio.TraerTodas();
+            
+
             cmbEmpresa.DataSource = null;
             cmbEmpresa.DataSource = _empresaNegocio.TraerTodas();
+            cmbEmpresa.DisplayMember = "RazonSocial";
+            cmbEmpresa.ValueMember = "Id";
         }
 
         private void _btnAgregar_Click(object sender, EventArgs e)
@@ -62,22 +66,29 @@ namespace TPEstudio
             {
                 string nombre = _txtNombre.Text;
                 string apellido = _txtApellido.Text;
-                int cuit = 0;
-                Validaciones.ValidarInt(_txtDni.Text, ref cuit);
+                Validaciones.ValidarVacio(nombre, " Nombre");
+                Validaciones.ValidarVacio(apellido, " Apellido");
+                long cuit = 0;
+                Validaciones.ValidarLong(_txtDni.Text, ref cuit);
                 DateTime fechanacimiento = DateTime.Now;
                 Validaciones.ValidarFecha(_txtLegajo.Text, ref fechanacimiento);
                 Categoria categoria = (Categoria)cmbCategoria.SelectedItem;
                 Empresa empresa = (Empresa)cmbEmpresa.SelectedItem;
 
-                _empleadoNegocio.Alta(categoria, empresa, Convert.ToInt64(cuit), nombre, apellido, fechanacimiento);
+                _empleadoNegocio.Alta(categoria, empresa, cuit, nombre, apellido, fechanacimiento);
                 Limpiar();
                 MessageBox.Show("El empleado se agregó con exito");
 
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

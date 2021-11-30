@@ -35,173 +35,171 @@ namespace TPEstudio
             this._lblPeriodo = new System.Windows.Forms.Label();
             this._lblBruto = new System.Windows.Forms.Label();
             this._lblDescuentos = new System.Windows.Forms.Label();
-            this._lblFechaAlta = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtIDLIQUIDACIÓN = new System.Windows.Forms.TextBox();
+            this.txtbruto = new System.Windows.Forms.TextBox();
+            this.txtDescuentos = new System.Windows.Forms.TextBox();
             this._btnAgregar = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.Button();
+            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
+            this.txtCodigoTransferencia = new System.Windows.Forms.TextBox();
+            this.cmbPeriodo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // _lblId
             // 
             this._lblId.AutoSize = true;
-            this._lblId.Location = new System.Drawing.Point(75, 80);
+            this._lblId.Location = new System.Drawing.Point(104, 147);
+            this._lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblId.Name = "_lblId";
-            this._lblId.Size = new System.Drawing.Size(16, 13);
+            this._lblId.Size = new System.Drawing.Size(71, 17);
             this._lblId.TabIndex = 0;
-            this._lblId.Text = "Id";
+            this._lblId.Text = "Empleado";
             // 
             // _lblLegajo
             // 
             this._lblLegajo.AutoSize = true;
-            this._lblLegajo.Location = new System.Drawing.Point(75, 123);
+            this._lblLegajo.Location = new System.Drawing.Point(100, 80);
+            this._lblLegajo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblLegajo.Name = "_lblLegajo";
-            this._lblLegajo.Size = new System.Drawing.Size(39, 13);
+            this._lblLegajo.Size = new System.Drawing.Size(112, 17);
             this._lblLegajo.TabIndex = 1;
-            this._lblLegajo.Text = "Legajo";
+            this._lblLegajo.Text = "ID de liquidación";
             // 
             // _lblCodigoTransferencia
             // 
             this._lblCodigoTransferencia.AutoSize = true;
-            this._lblCodigoTransferencia.Location = new System.Drawing.Point(75, 171);
+            this._lblCodigoTransferencia.Location = new System.Drawing.Point(100, 210);
+            this._lblCodigoTransferencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblCodigoTransferencia.Name = "_lblCodigoTransferencia";
-            this._lblCodigoTransferencia.Size = new System.Drawing.Size(108, 13);
+            this._lblCodigoTransferencia.Size = new System.Drawing.Size(144, 17);
             this._lblCodigoTransferencia.TabIndex = 2;
             this._lblCodigoTransferencia.Text = "Codigo Transferencia";
             // 
             // _lblPeriodo
             // 
             this._lblPeriodo.AutoSize = true;
-            this._lblPeriodo.Location = new System.Drawing.Point(75, 216);
+            this._lblPeriodo.Location = new System.Drawing.Point(100, 266);
+            this._lblPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblPeriodo.Name = "_lblPeriodo";
-            this._lblPeriodo.Size = new System.Drawing.Size(43, 13);
+            this._lblPeriodo.Size = new System.Drawing.Size(57, 17);
             this._lblPeriodo.TabIndex = 3;
             this._lblPeriodo.Text = "Periodo";
             // 
             // _lblBruto
             // 
             this._lblBruto.AutoSize = true;
-            this._lblBruto.Location = new System.Drawing.Point(75, 261);
+            this._lblBruto.Location = new System.Drawing.Point(100, 321);
+            this._lblBruto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblBruto.Name = "_lblBruto";
-            this._lblBruto.Size = new System.Drawing.Size(32, 13);
+            this._lblBruto.Size = new System.Drawing.Size(42, 17);
             this._lblBruto.TabIndex = 4;
             this._lblBruto.Text = "Bruto";
             // 
             // _lblDescuentos
             // 
             this._lblDescuentos.AutoSize = true;
-            this._lblDescuentos.Location = new System.Drawing.Point(75, 308);
+            this._lblDescuentos.Location = new System.Drawing.Point(100, 379);
+            this._lblDescuentos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblDescuentos.Name = "_lblDescuentos";
-            this._lblDescuentos.Size = new System.Drawing.Size(64, 13);
+            this._lblDescuentos.Size = new System.Drawing.Size(83, 17);
             this._lblDescuentos.TabIndex = 5;
             this._lblDescuentos.Text = "Descuentos";
             // 
-            // _lblFechaAlta
+            // txtIDLIQUIDACIÓN
             // 
-            this._lblFechaAlta.AutoSize = true;
-            this._lblFechaAlta.Location = new System.Drawing.Point(75, 361);
-            this._lblFechaAlta.Name = "_lblFechaAlta";
-            this._lblFechaAlta.Size = new System.Drawing.Size(58, 13);
-            this._lblFechaAlta.TabIndex = 6;
-            this._lblFechaAlta.Text = "Fecha Alta";
+            this.txtIDLIQUIDACIÓN.Enabled = false;
+            this.txtIDLIQUIDACIÓN.Location = new System.Drawing.Point(299, 75);
+            this.txtIDLIQUIDACIÓN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDLIQUIDACIÓN.Name = "txtIDLIQUIDACIÓN";
+            this.txtIDLIQUIDACIÓN.Size = new System.Drawing.Size(182, 22);
+            this.txtIDLIQUIDACIÓN.TabIndex = 8;
             // 
-            // textBox1
+            // txtbruto
             // 
-            this.textBox1.Location = new System.Drawing.Point(224, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtbruto.Location = new System.Drawing.Point(299, 321);
+            this.txtbruto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbruto.Name = "txtbruto";
+            this.txtbruto.Size = new System.Drawing.Size(182, 22);
+            this.txtbruto.TabIndex = 10;
             // 
-            // textBox2
+            // txtDescuentos
             // 
-            this.textBox2.Location = new System.Drawing.Point(224, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(224, 216);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(224, 261);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(224, 305);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 11;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(224, 171);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(224, 361);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 13;
+            this.txtDescuentos.Location = new System.Drawing.Point(299, 375);
+            this.txtDescuentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescuentos.Name = "txtDescuentos";
+            this.txtDescuentos.Size = new System.Drawing.Size(182, 22);
+            this.txtDescuentos.TabIndex = 11;
             // 
             // _btnAgregar
             // 
-            this._btnAgregar.Location = new System.Drawing.Point(224, 415);
+            this._btnAgregar.Location = new System.Drawing.Point(299, 511);
+            this._btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._btnAgregar.Name = "_btnAgregar";
-            this._btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this._btnAgregar.Size = new System.Drawing.Size(100, 28);
             this._btnAgregar.TabIndex = 14;
             this._btnAgregar.Text = "Agregar";
             this._btnAgregar.UseVisualStyleBackColor = true;
+            this._btnAgregar.Click += new System.EventHandler(this._btnAgregar_Click);
             // 
             // _btnVolver
             // 
-            this._btnVolver.Location = new System.Drawing.Point(383, 415);
+            this._btnVolver.Location = new System.Drawing.Point(511, 511);
+            this._btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._btnVolver.Name = "_btnVolver";
-            this._btnVolver.Size = new System.Drawing.Size(75, 23);
+            this._btnVolver.Size = new System.Drawing.Size(100, 28);
             this._btnVolver.TabIndex = 15;
             this._btnVolver.Text = "Volver";
             this._btnVolver.UseVisualStyleBackColor = true;
             this._btnVolver.Click += new System.EventHandler(this._btnVolver_Click);
             // 
+            // cmbEmpleado
+            // 
+            this.cmbEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Location = new System.Drawing.Point(299, 138);
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(182, 24);
+            this.cmbEmpleado.TabIndex = 16;
+            // 
+            // txtCodigoTransferencia
+            // 
+            this.txtCodigoTransferencia.Location = new System.Drawing.Point(299, 210);
+            this.txtCodigoTransferencia.Name = "txtCodigoTransferencia";
+            this.txtCodigoTransferencia.Size = new System.Drawing.Size(182, 22);
+            this.txtCodigoTransferencia.TabIndex = 17;
+            // 
+            // cmbPeriodo
+            // 
+            this.cmbPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPeriodo.FormattingEnabled = true;
+            this.cmbPeriodo.Location = new System.Drawing.Point(299, 257);
+            this.cmbPeriodo.Name = "cmbPeriodo";
+            this.cmbPeriodo.Size = new System.Drawing.Size(182, 24);
+            this.cmbPeriodo.TabIndex = 18;
+            // 
             // FrmIngresarLiquidacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 450);
+            this.ClientSize = new System.Drawing.Size(627, 554);
+            this.Controls.Add(this.cmbPeriodo);
+            this.Controls.Add(this.txtCodigoTransferencia);
+            this.Controls.Add(this.cmbEmpleado);
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._btnAgregar);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this._lblFechaAlta);
+            this.Controls.Add(this.txtDescuentos);
+            this.Controls.Add(this.txtbruto);
+            this.Controls.Add(this.txtIDLIQUIDACIÓN);
             this.Controls.Add(this._lblDescuentos);
             this.Controls.Add(this._lblBruto);
             this.Controls.Add(this._lblPeriodo);
             this.Controls.Add(this._lblCodigoTransferencia);
             this.Controls.Add(this._lblLegajo);
             this.Controls.Add(this._lblId);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmIngresarLiquidacion";
             this.Text = "FrmIngresarLiquidacion";
+            this.Load += new System.EventHandler(this.FrmIngresarLiquidacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,15 +213,13 @@ namespace TPEstudio
         private System.Windows.Forms.Label _lblPeriodo;
         private System.Windows.Forms.Label _lblBruto;
         private System.Windows.Forms.Label _lblDescuentos;
-        private System.Windows.Forms.Label _lblFechaAlta;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtIDLIQUIDACIÓN;
+        private System.Windows.Forms.TextBox txtbruto;
+        private System.Windows.Forms.TextBox txtDescuentos;
         private System.Windows.Forms.Button _btnAgregar;
         private System.Windows.Forms.Button _btnVolver;
+        private System.Windows.Forms.ComboBox cmbEmpleado;
+        private System.Windows.Forms.TextBox txtCodigoTransferencia;
+        private System.Windows.Forms.ComboBox cmbPeriodo;
     }
 }

@@ -13,12 +13,14 @@ namespace TPEstudio
     public partial class FrmLiquidaciones : Form
     {
         private FrmIngresarLiquidacion _frmIngresarLiquidacion;
+        private FrmConsultarLiquidaciones frmConsultarLiquidaciones;
         public FrmLiquidaciones(Form propietario)
         {
             this.Owner = propietario;
             InitializeComponent();
             _frmIngresarLiquidacion = new FrmIngresarLiquidacion();
             _frmIngresarLiquidacion.Owner = this;
+            frmConsultarLiquidaciones = new FrmConsultarLiquidaciones(this);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -33,6 +35,12 @@ namespace TPEstudio
             _frmIngresarLiquidacion.Show();
 
 
+        }
+
+        private void _btnConsultarLiquidacion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmConsultarLiquidaciones.Show();
         }
     }
 }

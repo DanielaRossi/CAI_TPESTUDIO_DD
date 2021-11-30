@@ -32,8 +32,6 @@ namespace TPEstudio
             this._lblNombre = new System.Windows.Forms.Label();
             this._lblConvenio = new System.Windows.Forms.Label();
             this._lblSueldosBasico = new System.Windows.Forms.Label();
-            this._cmbConvenio = new System.Windows.Forms.ComboBox();
-            this._txtSueldosBasico = new System.Windows.Forms.TextBox();
             this._txtNombre = new System.Windows.Forms.TextBox();
             this._btnAgregar = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.Button();
@@ -70,24 +68,6 @@ namespace TPEstudio
             this._lblSueldosBasico.Size = new System.Drawing.Size(98, 17);
             this._lblSueldosBasico.TabIndex = 3;
             this._lblSueldosBasico.Text = "Sueldo Basico";
-            // 
-            // _cmbConvenio
-            // 
-            this._cmbConvenio.FormattingEnabled = true;
-            this._cmbConvenio.Location = new System.Drawing.Point(435, 215);
-            this._cmbConvenio.Margin = new System.Windows.Forms.Padding(4);
-            this._cmbConvenio.Name = "_cmbConvenio";
-            this._cmbConvenio.Size = new System.Drawing.Size(132, 24);
-            this._cmbConvenio.TabIndex = 4;
-            // 
-            // _txtSueldosBasico
-            // 
-            this._txtSueldosBasico.Enabled = false;
-            this._txtSueldosBasico.Location = new System.Drawing.Point(420, 265);
-            this._txtSueldosBasico.Margin = new System.Windows.Forms.Padding(4);
-            this._txtSueldosBasico.Name = "_txtSueldosBasico";
-            this._txtSueldosBasico.Size = new System.Drawing.Size(132, 22);
-            this._txtSueldosBasico.TabIndex = 5;
             // 
             // _txtNombre
             // 
@@ -145,8 +125,6 @@ namespace TPEstudio
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._btnAgregar);
             this.Controls.Add(this._txtNombre);
-            this.Controls.Add(this._txtSueldosBasico);
-            this.Controls.Add(this._cmbConvenio);
             this.Controls.Add(this._lblSueldosBasico);
             this.Controls.Add(this._lblConvenio);
             this.Controls.Add(this._lblNombre);
@@ -163,8 +141,6 @@ namespace TPEstudio
         private System.Windows.Forms.Label _lblNombre;
         private System.Windows.Forms.Label _lblConvenio;
         private System.Windows.Forms.Label _lblSueldosBasico;
-        private System.Windows.Forms.ComboBox _cmbConvenio;
-        private System.Windows.Forms.TextBox _txtSueldosBasico;
         private System.Windows.Forms.TextBox _txtNombre;
         private System.Windows.Forms.Button _btnAgregar;
         private System.Windows.Forms.Button _btnVolver;
