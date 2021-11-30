@@ -37,7 +37,7 @@ namespace TPEstudio
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(632, 322);
+            this.button1.Location = new System.Drawing.Point(690, 401);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -49,9 +49,9 @@ namespace TPEstudio
             // 
             this.lstEmpresas.FormattingEnabled = true;
             this.lstEmpresas.ItemHeight = 16;
-            this.lstEmpresas.Location = new System.Drawing.Point(59, 41);
+            this.lstEmpresas.Location = new System.Drawing.Point(55, 263);
             this.lstEmpresas.Name = "lstEmpresas";
-            this.lstEmpresas.Size = new System.Drawing.Size(512, 324);
+            this.lstEmpresas.Size = new System.Drawing.Size(512, 148);
             this.lstEmpresas.TabIndex = 1;
             // 
             // label1
