@@ -16,6 +16,7 @@ namespace TPEstudio.Entidades
         private DateTime _fechaNacimiento;
         private DateTime _fechaAlta;
         private bool _activo;
+        
 
         public Empleado(int idEmpresa, int idCategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
         {
