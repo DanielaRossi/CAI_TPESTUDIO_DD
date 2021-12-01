@@ -39,5 +39,12 @@ namespace TPEstudio.Entidades
         {
             return $"{this.Id}) Id del empleado:{this.IdEmpleado}-Codigo Transferencia{this.CodigoTransferencia}";
         }
+        public string Mostrar 
+        { get
+            {
+                return $"{this.Id}) Id del empleado:{this.IdEmpleado}-Codigo Transferencia{this.CodigoTransferencia}";
+            }
+        } 
+        }
     }
-}
+

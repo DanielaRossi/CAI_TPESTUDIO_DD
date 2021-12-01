@@ -8,7 +8,7 @@ namespace TPEstudio.Entidades
 {
     public class Empleado : Persona
     {
-        private int _idEmpleado;
+        private int _id;
         private int _idEmpresa;
         private int _idCategoria;
         private long _cuil;
@@ -29,7 +29,7 @@ namespace TPEstudio.Entidades
         }
             
         public Liquidaciones Liq { get => _liquidacion; set => _liquidacion = value; }
-        public int IdEmpleado { get => _idEmpleado; set => _idEmpleado = value; }
+        public int Id { get => _id; set => _id = value; }
         public int IdEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
         public int IdCategoria { get => _idCategoria; set => _idCategoria = value; }
         public long Cuil { get => _cuil; set => _cuil = value; }
@@ -40,7 +40,14 @@ namespace TPEstudio.Entidades
 
         public override string ToString()
         {
-            return $"IdEmpleado {this._idEmpleado} Categoria: {this._idCategoria},Empresa: {this._idEmpresa},Cuil: {this._cuil}";
+            return $"IdEmpleado {this._id} Categoria: {this._idCategoria},Empresa: {this._idEmpresa},Cuil: {this._cuil}";
+        }
+        public string Mostrar
+        {
+            get
+            {
+                return $"IdEmpleado {this._id} Categoria: {this._idCategoria},Empresa: {this._idEmpresa},Cuil: {this._cuil}";
+            }
         }
     }
 }

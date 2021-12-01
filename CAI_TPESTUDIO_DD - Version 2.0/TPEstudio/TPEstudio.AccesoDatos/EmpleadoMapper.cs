@@ -22,6 +22,18 @@ namespace TPEstudio.AccesoDatos
             List<Empleado>lst= JsonConvert.DeserializeObject<List<Empleado>>(json);
             return lst;
         }
+        public Empleado Traerporid(int idEmpleado)
+        {
+            string json2 = WebHelper.Get("/EstudioContable/Empleados/" + idEmpleado.ToString()); 
+            Empleado resultado = MapListporid(json2);
+            return resultado;
+        }
+
+        public Empleado MapListporid(string json)
+        {
+            Empleado empleado = JsonConvert.DeserializeObject<Empleado>(json);
+            return empleado;
+        }
         public TransactionResult Insertar(Empleado empleado)
         {
             NameValueCollection obj = ReverseMap(empleado);
@@ -40,7 +52,7 @@ namespace TPEstudio.AccesoDatos
             n.Add("Apellido", empleado.Apellido);
             n.Add("FechaNacimiento", empleado.FechaNacimiento.ToString("yyyy-MM-dd"));
             n.Add("FechaAlta", DateTime.Now.ToString("yyyy-MM-dd"));
-            n.Add("id", empleado.IdEmpleado.ToString());
+            n.Add("id", empleado.Id.ToString());
             n.Add("usuario", "880671");
             return n;
 

@@ -50,6 +50,53 @@ namespace TPEstudio.Negocio
 
             
         }
+        public Empleado TraerEmpleadosporId(int idEmpleado)
+        {
+            try
+            {
+
+                return _empleadoMapper.Traerporid(idEmpleado);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se puedo traer a los empleados");
+            }
+
+
+
+        }
+        public Empleado TraerEmpleadosporEmpresa(int idEmpresa)
+        {
+            try
+            {
+                
+                _empleado = _empleadoMapper.Traer();
+                Empleado resultado = null;
+
+                foreach (var empleado in _empleado)
+                {
+
+                    if (empleado.IdEmpresa == idEmpresa)
+                        resultado = empleado;
+                    
+
+
+                }
+
+
+                return resultado;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se puedo traer a los empleados");
+            }
+
+
+
+        }
         public void Alta(Categoria categoria,Empresa empresa, long cuit,string nombre,string apellido, DateTime fechanacimiento)
         {
             Empleado empleado = new Empleado(empresa.Id, categoria.Id,cuit, nombre, apellido, fechanacimiento);

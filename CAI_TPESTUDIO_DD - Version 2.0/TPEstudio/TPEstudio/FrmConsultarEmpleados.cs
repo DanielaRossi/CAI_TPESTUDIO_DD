@@ -48,7 +48,7 @@ namespace TPEstudio
         {
             cmbLiquidacion.DataSource = null;
             cmbLiquidacion.DataSource = _liquidacionesNegocio.TraerTodas();
-            cmbLiquidacion.DisplayMember = "Id";
+            cmbLiquidacion.DisplayMember = "Mostrar";
             cmbLiquidacion.ValueMember = "Id";
         }
 
@@ -92,22 +92,23 @@ namespace TPEstudio
             try
             {
                 Empresa empresa= (Empresa)cmbEmpresa.SelectedItem;
-                _empresas = _empresaNegocio.TraerTodas();
                 _empleados = _empleadoNegocio.TraerTodos();
 
+
                 foreach (Empleado em in _empleados)
-                        {
-                            if (em.IdEmpresa == empresa.Id)
-                            {
-                        _empleados.Add(em);
-                                
-                            }
-                        }
+                {
+                    if (em.IdEmpresa == empresa.Id)
+                    {
+                        
+                    }
+
+                }
 
                 lstEmpleadosporempresa.DataSource = null;
-                lstEmpleadosporempresa.DataSource = _empleados;
-                    
-                
+                lstEmpleadosporempresa.DataSource = _empleadoNegocio.TraerEmpleadosporId(em.Id);
+
+
+
             }
             catch(Exception ex)
             {
