@@ -16,12 +16,14 @@ namespace TPEstudio
     {
         private EmpresaNegocio _empresaNegocio;
         //private OperadorEmpresas _operadorEmpresa;
+        private LiquidacionesNegocio _liquidacionesNegocio;
         private List<Empresa> _empresas;
         public FrmConsultarEmpresa(Form propietario)
         {
             InitializeComponent();
             this.Owner = propietario;
             _empresaNegocio = new EmpresaNegocio();
+            _liquidacionesNegocio = new LiquidacionesNegocio();
             
             //_operadorEmpresa = new OperadorEmpresas(_empresas);
         }
@@ -33,7 +35,15 @@ namespace TPEstudio
             lstEmpresas.DataSource = _empresas;
             
             CargarDatos();
+            CargarCombo();
 
+        }
+        private void CargarCombo()
+        {
+            cmbLiquidacion.DataSource = null;
+            cmbLiquidacion.DataSource = _liquidacionesNegocio.TraerTodas();
+            cmbLiquidacion.DisplayMember = "Id";
+            cmbLiquidacion.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
