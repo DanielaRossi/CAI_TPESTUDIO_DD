@@ -74,6 +74,7 @@ namespace TPEstudio
                             {
                                 txtResultado.Text = em.ToString();
                             }
+                    
                         }
                     
                 
@@ -98,10 +99,13 @@ namespace TPEstudio
                         {
                             if (em.IdEmpresa == empresa.Id)
                             {
-                                //como lo sumo a una lista
+                        _empleados.Add(em);
                                 
                             }
                         }
+
+                lstEmpleadosporempresa.DataSource = null;
+                lstEmpleadosporempresa.DataSource = _empleados;
                     
                 
             }
