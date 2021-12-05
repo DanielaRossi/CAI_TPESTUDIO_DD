@@ -38,8 +38,18 @@ namespace TPEstudio.Entidades
                 return $"{this._nombre}-{this._convenio}";
             }
         }
-        
-        
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Categoria))
+                return false;
+            Categoria categoriaacomparar = (Categoria)obj;
+            if (categoriaacomparar._id == this._id)
+                return true;
+            else
+                return false;
+        }
+
+
 
     }
 }

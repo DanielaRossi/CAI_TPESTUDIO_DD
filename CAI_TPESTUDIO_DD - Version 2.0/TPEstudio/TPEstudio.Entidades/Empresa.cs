@@ -26,11 +26,22 @@ namespace TPEstudio.Entidades
             _razonSocial = razonSocial;
             _cuit = cuit;
             _domicilio = domicilio;
+            _fechaAlta = DateTime.Today;
             
         }
         public override string ToString()
         {
             return $"{this.Id}) {this.RazonSocial}- Cuil: {this.Cuit}-Domicilio: {this._domicilio}-Fecha de alta: { this._fechaAlta}";
+        }
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Empresa))
+                return false;
+            Empresa empresaacomparar = (Empresa)obj;
+            if (empresaacomparar._id == this._id)
+                return true;
+            else
+                return false;
         }
     }
 }

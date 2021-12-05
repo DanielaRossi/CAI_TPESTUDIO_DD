@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPEstudio.Entidades
 {
-    public class Persona
+    public abstract class Persona
     {
         private int _id;
         private string _nombre;
@@ -29,5 +29,11 @@ namespace TPEstudio.Entidades
         public string Direccion { get => _direccion; set => _direccion = value; }
         public long Telefono { get => _telefono; set => _telefono = value; }
         public string Mail { get => _mail; set => _mail = value; }
+
+        public override string ToString()
+        {
+            return Display();
+        }
+        internal abstract string Display();
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPEstudio.Negocio;
+using ConsolaUtils;
 
 namespace TPEstudio
 {
@@ -21,9 +22,12 @@ namespace TPEstudio
         }
 
         private void _btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.Owner.Show();
+        {try
+            {
+                this.Hide();
+                this.Owner.Show();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void _btnAgregar_Click(object sender, EventArgs e)
@@ -33,6 +37,8 @@ namespace TPEstudio
                 string razon = _txtRazonSocial.Text;
                 Validaciones.ValidarVacio(razon, " Razón social");
                 long cuit = 0;
+                
+
                 Validaciones.ValidarLong(_txtCuit.Text, ref cuit);
                 string domicilio = _txtDomicilio.Text;
                 Validaciones.ValidarVacio(domicilio, " Domicilio");
@@ -48,9 +54,17 @@ namespace TPEstudio
         }
         private void Limpiar()
         {
-            _txtCuit.Clear();
-            _txtDomicilio.Clear();
-            _txtRazonSocial.Clear();
+            try
+            {
+                _txtCuit.Clear();
+                _txtDomicilio.Clear();
+                _txtRazonSocial.Clear();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo limpiar los campos.");
+            }
+            
         }
 
         private void FrmIngresarNuevaEmpresa_Load(object sender, EventArgs e)

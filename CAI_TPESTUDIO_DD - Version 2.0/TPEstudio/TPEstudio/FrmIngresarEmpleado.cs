@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPEstudio.Entidades;
 using TPEstudio.Negocio;
+using ConsolaUtils;
 
 namespace TPEstudio
 {
@@ -30,10 +31,13 @@ namespace TPEstudio
 
         private void _btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Owner.Show();
-
-        }
+            try
+            {
+                this.Hide();
+                this.Owner.Show();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+         }
 
         private void FrmIngresarEmpleado_Load(object sender, EventArgs e)
         {
@@ -52,6 +56,8 @@ namespace TPEstudio
         {
             cmbCategoria.DataSource = null;
             cmbCategoria.DataSource = _categoriaNegocio.TraerTodas();
+            cmbCategoria.DisplayMember = "NombreyConvenio";
+            cmbCategoria.ValueMember = "Id";
             
 
             cmbEmpresa.DataSource = null;
@@ -68,17 +74,17 @@ namespace TPEstudio
                 string apellido = _txtApellido.Text;
                 Validaciones.ValidarVacio(nombre, " Nombre");
                 Validaciones.ValidarVacio(apellido, " Apellido");
-                long cuit = 0;
-                Validaciones.ValidarLong(_txtDni.Text, ref cuit);
+                long cuil = 0;
+                Validaciones.ValidarLong(_txtDni.Text, ref cuil);
                 DateTime fechanacimiento = DateTime.Now;
                 Validaciones.ValidarFecha(_txtLegajo.Text, ref fechanacimiento);
                 Categoria categoria = (Categoria)cmbCategoria.SelectedItem;
                 Empresa empresa = (Empresa)cmbEmpresa.SelectedItem;
 
-                _empleadoNegocio.Alta(categoria, empresa, cuit, nombre, apellido, fechanacimiento);
-                Limpiar();
+                _empleadoNegocio.Alta(categoria, empresa, cuil, nombre, apellido, fechanacimiento);
+                
                 MessageBox.Show("El empleado se agregó con exito");
-
+                Limpiar();
             }
             catch(Exception ex)
             {

@@ -97,9 +97,15 @@ namespace TPEstudio.Negocio
 
 
         }
-        public void Alta(Categoria categoria,Empresa empresa, long cuit,string nombre,string apellido, DateTime fechanacimiento)
+        public void Alta(Categoria categoria,Empresa empresa, long cuil,string nombre,string apellido, DateTime fechanacimiento)
         {
-            Empleado empleado = new Empleado(empresa.Id, categoria.Id,cuit, nombre, apellido, fechanacimiento);
+            if (cuil > 99999999999 || cuil < 11111111111)
+            {
+                throw new Exception("El cuil del empleado debe tener 11 dígitos.");
+            }
+            Empleado empleado = new Empleado(empresa.Id, categoria.Id,cuil, nombre, apellido, fechanacimiento);
+            //empleado.NombreEmpresa = empresa.RazonSocial;
+
             TransactionResult result = _empleadoMapper.Insertar(empleado);
             if(!result.IsOk)
             {

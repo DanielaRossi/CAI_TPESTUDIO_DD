@@ -30,9 +30,12 @@ namespace TPEstudio
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            this.Owner.Show();
-            this.Hide();
+        {try
+            {
+                this.Owner.Show();
+                this.Hide();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); } 
         }
 
         private void FrmConsultarCategoria_Load(object sender, EventArgs e)

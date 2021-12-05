@@ -31,22 +31,30 @@ namespace TPEstudio
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Owner.Show();
-            this.Hide();
-            
+        {try
+            {
+                this.Owner.Show();
+                this.Hide();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); } 
         }
 
         private void _btnIngresarEmpresa_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            _frmIngresarNuevaEmpresa.Show();
+        {try
+            {
+                this.Hide();
+                _frmIngresarNuevaEmpresa.Show();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void _btnConsultarEmpresas_Click(object sender, EventArgs e)
-        {
-            _frmConsultarEmpresa.Show();
-            this.Hide();
+        {try
+            {
+                _frmConsultarEmpresa.Show();
+                this.Hide();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

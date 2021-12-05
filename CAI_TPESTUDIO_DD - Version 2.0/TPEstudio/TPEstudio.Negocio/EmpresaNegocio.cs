@@ -23,10 +23,24 @@ namespace TPEstudio.Negocio
         }
         public void Alta(string razon, long cuit, string domicilio)
         {
+            if(cuit>99999999999|| cuit < 11111111111)
+            {
+                throw new Exception("La cuit de la empresa debe tener 11 dígitos.");
+            }
             
                 Empresa e = new Empresa(razon, cuit, domicilio);
 
-                TransactionResult result = empresaMapper.Insertar(e);
+            foreach (Empresa empresa in empresaMapper.Traer())
+            {
+                if (empresa.Cuit.Equals(e.Cuit))
+                {
+
+                    throw new Exception("La empresa ya existe.");
+                }
+            }
+
+
+            TransactionResult result = empresaMapper.Insertar(e);
 
                 if (!result.IsOk)
                 {

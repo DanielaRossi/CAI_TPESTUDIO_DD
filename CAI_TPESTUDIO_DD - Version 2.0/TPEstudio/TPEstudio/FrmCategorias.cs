@@ -31,21 +31,33 @@ namespace TPEstudio
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Owner.Show();
-            this.Hide();
+        {try
+            {
+                this.Owner.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message); 
+            }
         }
 
         private void _btnIngresarCategoria_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            _frmIngresarCategoria.Show();
+        {try
+            {
+                this.Hide();
+                _frmIngresarCategoria.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("No se puede ingresar una nueva categoría por el momento."); } 
         }
 
         private void _btnConsultarCategoria_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmConsultarCategoria.Show();
+        {try
+            {
+                this.Hide();
+                frmConsultarCategoria.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("No se puede consultar las categorías por el momento."); } 
         }
     }
 }

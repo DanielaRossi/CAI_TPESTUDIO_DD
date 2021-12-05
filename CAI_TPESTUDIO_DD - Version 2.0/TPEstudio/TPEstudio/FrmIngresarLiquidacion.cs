@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TPEstudio.Entidades;
 using TPEstudio.Entidades.Enums;
 using TPEstudio.Negocio;
+using ConsolaUtils;
 
 namespace TPEstudio
 {

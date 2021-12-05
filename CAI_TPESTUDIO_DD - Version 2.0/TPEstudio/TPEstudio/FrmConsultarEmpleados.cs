@@ -39,6 +39,7 @@ namespace TPEstudio
         {
             lstEmpleados.DataSource = null;
             lstEmpleados.DataSource = _empleadoNegocio.TraerTodos();
+            
             cmbEmpresa.DataSource = null;
             cmbEmpresa.DataSource = _empresaNegocio.TraerTodas();
             cmbEmpresa.DisplayMember = "RazonSocial";
@@ -62,27 +63,27 @@ namespace TPEstudio
         {
             
             
-            try
-            {
-                Liquidaciones id = (Liquidaciones)cmbLiquidacion.SelectedItem;
-                _empleados = _empleadoNegocio.TraerTodos();
+            //try
+            //{
+            //    Liquidaciones id = (Liquidaciones)cmbLiquidacion.SelectedItem;
+            //    _empleados = _empleadoNegocio.TraerTodos();
                 
                    
-                        foreach (Empleado em in _empleados)
-                        {
-                            if (em.Liq == id)
-                            {
-                                txtResultado.Text = em.ToString();
-                            }
+            //            foreach (Empleado em in _empleados)
+            //            {
+            //                if (em.Liq == id)
+            //                {
+            //                    txtResultado.Text = em.ToString();
+            //                }
                     
-                        }
+            //            }
                     
                 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
 
 
         }
@@ -91,21 +92,26 @@ namespace TPEstudio
         {
             try
             {
+                List<Empleado> _empleadosporempresa = new List<Empleado>();
                 Empresa empresa= (Empresa)cmbEmpresa.SelectedItem;
                 _empleados = _empleadoNegocio.TraerTodos();
 
 
                 foreach (Empleado em in _empleados)
                 {
-                    if (em.IdEmpresa == empresa.Id)
+                    if (em.IdEmpresa.Equals(empresa.Id))
                     {
-                        
+                        _empleadosporempresa.Add(em);
                     }
 
                 }
+                if(_empleadosporempresa == null)
+                {
+                    throw new Exception("No hay empleados en la empresa.");
+                }
 
                 lstEmpleadosporempresa.DataSource = null;
-                lstEmpleadosporempresa.DataSource = _empleadoNegocio.TraerEmpleadosporId(em.Id);
+                lstEmpleadosporempresa.DataSource = _empleadosporempresa;
 
 
 

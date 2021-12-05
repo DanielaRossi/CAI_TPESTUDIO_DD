@@ -188,6 +188,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConsolaUtils\ConsolaUtils.csproj">
+      <Project>{cdcaf342-520e-41d2-9230-88baaed6b94c}</Project>
+      <Name>ConsolaUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TPEstudio.Entidades\TPEstudio.Entidades.csproj">
       <Project>{7f97fe29-bcf7-4441-9953-73b1cd244757}</Project>
       <Name>TPEstudio.Entidades</Name>

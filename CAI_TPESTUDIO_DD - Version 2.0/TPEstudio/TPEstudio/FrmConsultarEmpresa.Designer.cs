@@ -39,11 +39,12 @@ namespace TPEstudio
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(690, 401);
+            this.button1.Location = new System.Drawing.Point(713, 401);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -55,15 +56,15 @@ namespace TPEstudio
             // 
             this.lstEmpresas.FormattingEnabled = true;
             this.lstEmpresas.ItemHeight = 16;
-            this.lstEmpresas.Location = new System.Drawing.Point(55, 263);
+            this.lstEmpresas.Location = new System.Drawing.Point(28, 276);
             this.lstEmpresas.Name = "lstEmpresas";
-            this.lstEmpresas.Size = new System.Drawing.Size(512, 148);
+            this.lstEmpresas.Size = new System.Drawing.Size(656, 148);
             this.lstEmpresas.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(603, 93);
+            this.label1.Location = new System.Drawing.Point(430, 243);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 17);
             this.label1.TabIndex = 2;
@@ -72,9 +73,9 @@ namespace TPEstudio
             // txtCantidadempresas
             // 
             this.txtCantidadempresas.Enabled = false;
-            this.txtCantidadempresas.Location = new System.Drawing.Point(606, 130);
+            this.txtCantidadempresas.Location = new System.Drawing.Point(595, 240);
             this.txtCantidadempresas.Name = "txtCantidadempresas";
-            this.txtCantidadempresas.Size = new System.Drawing.Size(120, 22);
+            this.txtCantidadempresas.Size = new System.Drawing.Size(89, 22);
             this.txtCantidadempresas.TabIndex = 3;
             // 
             // label2
@@ -128,11 +129,21 @@ namespace TPEstudio
             this.txtRespuesta.Size = new System.Drawing.Size(121, 22);
             this.txtRespuesta.TabIndex = 9;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 236);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(201, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Listado de todas las empresas";
+            // 
             // FrmConsultarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtRespuesta);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
@@ -163,5 +174,6 @@ namespace TPEstudio
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRespuesta;
+        private System.Windows.Forms.Label label5;
     }
 }

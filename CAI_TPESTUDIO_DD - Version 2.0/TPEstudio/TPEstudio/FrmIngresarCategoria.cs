@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPEstudio.Entidades.Enums;
 using TPEstudio.Negocio;
+using ConsolaUtils;
 
 namespace TPEstudio
 {
@@ -23,8 +24,16 @@ namespace TPEstudio
 
         private void _btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Owner.Show();
+            try
+            {
+                this.Hide();
+                this.Owner.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void _btnAgregar_Click(object sender, EventArgs e)
@@ -47,6 +56,7 @@ namespace TPEstudio
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                Limpiar();
             }
         }
         public void ValidacionesIngreso()
@@ -55,31 +65,45 @@ namespace TPEstudio
             ConvenioEnum convenio = (ConvenioEnum)cmbConvenio.SelectedItem;
             string sueldo = txtsueldo.Text;
             double Salidasueldo = 0;
+            
 
-            if ((int)convenio == 0)
-            {
-                throw new Exception("Seleccione un convenio");
-            }
-            Validaciones.ValidarVacio(nombre, "Nombre");
+            
+            Validaciones.ValidarVacio(nombre, " Nombre");
             Validaciones.ValidarDouble(sueldo, ref Salidasueldo);
             
 
         }
         private void Limpiar()
         {
-            _txtNombre.Clear();
-            cmbConvenio.SelectedIndex = 0;
-            txtsueldo.Clear();
+            try
+            {
+                _txtNombre.Clear();
+                cmbConvenio.SelectedIndex = 0;
+                txtsueldo.Clear();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void FrmIngresarCategoria_Load(object sender, EventArgs e)
         {
-            CargarCombo();
+            try
+            {
+                CargarCombo();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se puedo cargar los convenios.");
+            }
+            
         }
         private void CargarCombo()
         {
             cmbConvenio.DataSource = Enum.GetValues(typeof(ConvenioEnum));
-                
+
         }
     }
 }

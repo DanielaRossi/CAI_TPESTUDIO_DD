@@ -17,6 +17,8 @@ namespace TPEstudio.Entidades
         private DateTime _fechaAlta;
         private bool _activo;
         private Liquidaciones _liquidacion;
+        //private string _nombreEmpresa;
+       
         
 
         public Empleado(int idEmpresa, int idCategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
@@ -38,16 +40,27 @@ namespace TPEstudio.Entidades
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public bool Activo { get => _activo; set => _activo = value; }
 
+        public string NombreEmpresa { get => _nombreEmpresa; set => _nombreEmpresa = value; }
+           
         public override string ToString()
         {
-            return $"IdEmpleado {this._id} Categoria: {this._idCategoria},Empresa: {this._idEmpresa},Cuil: {this._cuil}";
+            return Display();
         }
-        public string Mostrar
+        internal override string Display()
         {
-            get
-            {
-                return $"IdEmpleado {this._id} Categoria: {this._idCategoria},Empresa: {this._idEmpresa},Cuil: {this._cuil}";
-            }
+            
+                return $"{this._id}){this.Nombre}-{this.Apellido}-Cuil:{this._cuil}-Empresa:{this._nombreEmpresa}";
+            
+        }
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Empleado))
+                return false;
+            Empleado empleadoacomparar = (Empleado)obj;
+            if (empleadoacomparar._id == this._id)
+                return true;
+            else
+                return false;
         }
     }
 }

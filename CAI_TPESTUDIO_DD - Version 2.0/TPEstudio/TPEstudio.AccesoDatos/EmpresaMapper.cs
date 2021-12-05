@@ -38,7 +38,7 @@ namespace TPEstudio.AccesoDatos
             nv.Add("cuit", empresa.Cuit.ToString());
             nv.Add("domicilio", empresa.Domicilio);
             nv.Add("id", empresa.Id.ToString());
-            nv.Add("fechaAlta", DateTime.Now.ToString());
+            nv.Add("fechaAlta", empresa.FechaAlta.ToString("yyyy-MM-dd"));
             nv.Add("usuario", "880671");
             return nv;
 

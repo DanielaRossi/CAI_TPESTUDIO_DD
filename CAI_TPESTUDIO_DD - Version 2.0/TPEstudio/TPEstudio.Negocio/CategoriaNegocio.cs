@@ -23,11 +23,23 @@ namespace TPEstudio.Negocio
         }
         public void Alta(string nombre, ConvenioEnum convenio, double sueldobasico)
         {
+            if ((int)convenio == 0)
+            {
+                throw new Exception("Seleccione un convenio");
+            }
             if (sueldobasico < 1000)
             {
                 throw new SueldoBasicoFueraLimiteExpection();
             }
             Categoria c= new Categoria(nombre, convenio.ToString(), sueldobasico);
+            foreach(Categoria categoria in _categoriaMapper.Traer())
+            {
+                if(categoria.Nombre.Equals(c.Nombre)&& categoria.Convenio.Equals(c.Convenio))
+                {
+
+                    throw new Exception("La categoría ya existe.");
+                }
+            }
             TransactionResult result= _categoriaMapper.Insertar(c);
 
             if (!result.IsOk)

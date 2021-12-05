@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPEstudio.Negocio
+namespace ConsolaUtils
 {
     public static class Validaciones
     {

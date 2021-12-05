@@ -36,20 +36,38 @@ namespace TPEstudio
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
-            this.Hide();
+            try
+            {
+                this.Owner.Show();
+                this.Hide();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void _btnIngresarNuevoEmpleado_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            _frmIngresarEmpleado.Show();
+            try
+            {
+                this.Hide();
+                _frmIngresarEmpleado.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void _btnConsultarEmpleado_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            _frmConsultarEmpleados.Show();
+        {try
+            {
+                this.Hide();
+                _frmConsultarEmpleados.Show();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); } 
         }
     }
 }
