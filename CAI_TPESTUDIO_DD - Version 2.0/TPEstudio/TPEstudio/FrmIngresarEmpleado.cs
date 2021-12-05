@@ -50,18 +50,22 @@ namespace TPEstudio
             _txtLegajo.Clear();
             _txtDni.Clear();
             cmbCategoria.SelectedIndex = 0;
-            cmbEmpresa.SelectedItem = 0;
+            cmbEmpresa.SelectedIndex = 0;
         }
         private void CargarCombos()
         {
+            List<Categoria> Categorialst = _categoriaNegocio.TraerTodas();
+            Categorialst.Insert(0, new Categoria("--Seleccione-- ","", 0));
             cmbCategoria.DataSource = null;
-            cmbCategoria.DataSource = _categoriaNegocio.TraerTodas();
+            cmbCategoria.DataSource = Categorialst;
+           
             cmbCategoria.DisplayMember = "NombreyConvenio";
             cmbCategoria.ValueMember = "Id";
-            
+            List<Empresa> Empresalst = _empresaNegocio.TraerTodas();
+            Empresalst.Insert(0, new Empresa("--Seleccione-- ", 0, ""));
 
             cmbEmpresa.DataSource = null;
-            cmbEmpresa.DataSource = _empresaNegocio.TraerTodas();
+            cmbEmpresa.DataSource = Empresalst;
             cmbEmpresa.DisplayMember = "RazonSocial";
             cmbEmpresa.ValueMember = "Id";
         }
@@ -80,6 +84,7 @@ namespace TPEstudio
                 Validaciones.ValidarFecha(_txtLegajo.Text, ref fechanacimiento);
                 Categoria categoria = (Categoria)cmbCategoria.SelectedItem;
                 Empresa empresa = (Empresa)cmbEmpresa.SelectedItem;
+                
 
                 _empleadoNegocio.Alta(categoria, empresa, cuil, nombre, apellido, fechanacimiento);
                 

@@ -108,32 +108,32 @@ namespace TPEstudio
             // txtIDLIQUIDACIÓN
             // 
             this.txtIDLIQUIDACIÓN.Enabled = false;
-            this.txtIDLIQUIDACIÓN.Location = new System.Drawing.Point(299, 75);
-            this.txtIDLIQUIDACIÓN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDLIQUIDACIÓN.Location = new System.Drawing.Point(497, 80);
+            this.txtIDLIQUIDACIÓN.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDLIQUIDACIÓN.Name = "txtIDLIQUIDACIÓN";
-            this.txtIDLIQUIDACIÓN.Size = new System.Drawing.Size(182, 22);
+            this.txtIDLIQUIDACIÓN.Size = new System.Drawing.Size(79, 22);
             this.txtIDLIQUIDACIÓN.TabIndex = 8;
             // 
             // txtbruto
             // 
-            this.txtbruto.Location = new System.Drawing.Point(299, 321);
-            this.txtbruto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbruto.Location = new System.Drawing.Point(432, 321);
+            this.txtbruto.Margin = new System.Windows.Forms.Padding(4);
             this.txtbruto.Name = "txtbruto";
-            this.txtbruto.Size = new System.Drawing.Size(182, 22);
+            this.txtbruto.Size = new System.Drawing.Size(144, 22);
             this.txtbruto.TabIndex = 10;
             // 
             // txtDescuentos
             // 
-            this.txtDescuentos.Location = new System.Drawing.Point(299, 375);
-            this.txtDescuentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescuentos.Location = new System.Drawing.Point(432, 375);
+            this.txtDescuentos.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescuentos.Name = "txtDescuentos";
-            this.txtDescuentos.Size = new System.Drawing.Size(182, 22);
+            this.txtDescuentos.Size = new System.Drawing.Size(144, 22);
             this.txtDescuentos.TabIndex = 11;
             // 
             // _btnAgregar
             // 
             this._btnAgregar.Location = new System.Drawing.Point(299, 511);
-            this._btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this._btnAgregar.Name = "_btnAgregar";
             this._btnAgregar.Size = new System.Drawing.Size(100, 28);
             this._btnAgregar.TabIndex = 14;
@@ -144,7 +144,7 @@ namespace TPEstudio
             // _btnVolver
             // 
             this._btnVolver.Location = new System.Drawing.Point(511, 511);
-            this._btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(100, 28);
             this._btnVolver.TabIndex = 15;
@@ -156,25 +156,25 @@ namespace TPEstudio
             // 
             this.cmbEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(299, 138);
+            this.cmbEmpleado.Location = new System.Drawing.Point(204, 140);
             this.cmbEmpleado.Name = "cmbEmpleado";
-            this.cmbEmpleado.Size = new System.Drawing.Size(182, 24);
+            this.cmbEmpleado.Size = new System.Drawing.Size(372, 24);
             this.cmbEmpleado.TabIndex = 16;
             // 
             // txtCodigoTransferencia
             // 
-            this.txtCodigoTransferencia.Location = new System.Drawing.Point(299, 210);
+            this.txtCodigoTransferencia.Location = new System.Drawing.Point(311, 210);
             this.txtCodigoTransferencia.Name = "txtCodigoTransferencia";
-            this.txtCodigoTransferencia.Size = new System.Drawing.Size(182, 22);
+            this.txtCodigoTransferencia.Size = new System.Drawing.Size(265, 22);
             this.txtCodigoTransferencia.TabIndex = 17;
             // 
             // cmbPeriodo
             // 
             this.cmbPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPeriodo.FormattingEnabled = true;
-            this.cmbPeriodo.Location = new System.Drawing.Point(299, 257);
+            this.cmbPeriodo.Location = new System.Drawing.Point(432, 259);
             this.cmbPeriodo.Name = "cmbPeriodo";
-            this.cmbPeriodo.Size = new System.Drawing.Size(182, 24);
+            this.cmbPeriodo.Size = new System.Drawing.Size(144, 24);
             this.cmbPeriodo.TabIndex = 18;
             // 
             // FrmIngresarLiquidacion
@@ -196,7 +196,7 @@ namespace TPEstudio
             this.Controls.Add(this._lblCodigoTransferencia);
             this.Controls.Add(this._lblLegajo);
             this.Controls.Add(this._lblId);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmIngresarLiquidacion";
             this.Text = "FrmIngresarLiquidacion";
             this.Load += new System.EventHandler(this.FrmIngresarLiquidacion_Load);

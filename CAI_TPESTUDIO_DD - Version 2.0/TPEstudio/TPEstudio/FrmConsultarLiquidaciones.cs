@@ -35,7 +35,7 @@ namespace TPEstudio
         {
             cmbLiquidacion.DataSource = null;
             cmbLiquidacion.DataSource = liquidacionesNegocio.TraerTodas();
-            cmbLiquidacion.DisplayMember = "Mostrar";
+            cmbLiquidacion.DisplayMember = "Id";
             cmbLiquidacion.ValueMember = "Id";
             cmbCategoria.DataSource = null;
             cmbCategoria.DataSource = categoriaNegocio.TraerTodas();
@@ -57,11 +57,20 @@ namespace TPEstudio
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int idliquidacion = cmbLiquidacion.SelectedIndex;
+            try
+            {
+                Liquidaciones liquidacion = (Liquidaciones)cmbLiquidacion.SelectedItem;
+
+
+                Liquidaciones l = liquidacionesNegocio.Traerporidliquidacion(liquidacion.Id);
+
+                txtResultado.Text = l.Mostrar;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             
-            
-            Liquidaciones l= liquidacionesNegocio.Traerporidliquidacion(idliquidacion);
-            txtResultado.Text = l.ToString();
 
         }
 
@@ -73,6 +82,14 @@ namespace TPEstudio
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Categoria categoria = (Categoria)cmbCategoria.SelectedItem;
+            List<Liquidaciones> lst = liquidacionesNegocio.Traerliquidacionesporcategoria(categoria.Id);
+            lstLiquidacionporcategoria.DataSource = null;
+            lstLiquidacionporcategoria.DataSource = lst;
         }
     }
 }

@@ -11,37 +11,45 @@ namespace TPEstudio.Entidades
         private int _id;
         private int _idEmpresa;
         private int _idCategoria;
+        //private Categoria _categoria;
+        //private Empresa _empresa;
         private long _cuil;
       
         private DateTime _fechaNacimiento;
         private DateTime _fechaAlta;
         private bool _activo;
         private Liquidaciones _liquidacion;
-        //private string _nombreEmpresa;
+        private Categoria _categorias;
+        
        
         
 
-        public Empleado(int idEmpresa, int idCategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
+        public Empleado(int idempresa, int idcategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
         {
 
-            this._idCategoria = idCategoria;
-            this._idEmpresa = idEmpresa;
+            this.IdCategoria = idcategoria;
+            this.IdEmpresa = idempresa;
             this._cuil = cuil;
             this._fechaNacimiento = fechanacimeinto;
+        }
+        public Empleado()
+        {
+
         }
             
         public Liquidaciones Liq { get => _liquidacion; set => _liquidacion = value; }
         public int Id { get => _id; set => _id = value; }
-        public int IdEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
-        public int IdCategoria { get => _idCategoria; set => _idCategoria = value; }
+        //public Empresa Empresa { get => _empresa; set => _empresa = value; }
+        //public Categoria Categoria { get => _categoria; set => _categoria = value; }
         public long Cuil { get => _cuil; set => _cuil = value; }
         
         public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public bool Activo { get => _activo; set => _activo = value; }
+        public int IdEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
+        public int IdCategoria { get => _idCategoria; set => _idCategoria = value; }
+        public Categoria Categorias { get => _categorias; set => _categorias = value; }
 
-        public string NombreEmpresa { get => _nombreEmpresa; set => _nombreEmpresa = value; }
-           
         public override string ToString()
         {
             return Display();
@@ -49,7 +57,7 @@ namespace TPEstudio.Entidades
         internal override string Display()
         {
             
-                return $"{this._id}){this.Nombre}-{this.Apellido}-Cuil:{this._cuil}-Empresa:{this._nombreEmpresa}";
+                return $"{this.Nombre}-{this.Apellido}-Cuil:{this._cuil}";
             
         }
         public override bool Equals(object obj)

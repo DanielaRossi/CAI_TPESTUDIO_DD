@@ -25,22 +25,46 @@ namespace TPEstudio
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
-            this.Hide();
+            try
+            {
+                this.Owner.Show();
+                this.Hide();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void _btnIngresarLiquidacion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            _frmIngresarLiquidacion.Show();
+            try
+            {
+                this.Hide();
+                _frmIngresarLiquidacion.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
 
 
         }
 
         private void _btnConsultarLiquidacion_Click(object sender, EventArgs e)
+        {try
+            {
+                this.Hide();
+                frmConsultarLiquidaciones.Show();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void FrmLiquidaciones_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            frmConsultarLiquidaciones.Show();
+
         }
     }
 }

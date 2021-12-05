@@ -22,6 +22,10 @@ namespace TPEstudio.Entidades
             _apellido = apellido;
             
         }
+        public Persona()
+        {
+
+        }
 
         public int Id { get => _id; set => _id = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }

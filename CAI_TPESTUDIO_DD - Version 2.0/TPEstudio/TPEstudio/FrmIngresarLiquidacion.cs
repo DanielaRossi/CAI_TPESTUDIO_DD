@@ -18,17 +18,27 @@ namespace TPEstudio
     {
         private EmpleadoNegocio _empleadoNegocio;
         private LiquidacionesNegocio liquidacionesNegocio;
+        private List<Empleado> _empleados;
         public FrmIngresarLiquidacion()
         {
             InitializeComponent();
             _empleadoNegocio = new EmpleadoNegocio();
+            _empleados = new List<Empleado>();
             liquidacionesNegocio = new LiquidacionesNegocio();
         }
 
         private void _btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Owner.Show();
+            try
+            {
+                this.Hide();
+                this.Owner.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             
         }
 
@@ -38,8 +48,13 @@ namespace TPEstudio
         }
         private void Cargarcombos()
         {
+            List<Empleado> Empleadolst = _empleadoNegocio.TraerTodos();
+            Empleadolst.Insert(0, new Empleado(0, 0, 0, "--Seleccione--", "", DateTime.Now));
+            
             cmbEmpleado.DataSource = null;
-            cmbEmpleado.DataSource = _empleadoNegocio.TraerTodos();
+            cmbEmpleado.DataSource = Empleadolst;
+            cmbEmpleado.DisplayMember = "ToString";
+            
             cmbPeriodo.DataSource = Enum.GetValues(typeof(PeriodoEnum));
         }
 
@@ -77,6 +92,7 @@ namespace TPEstudio
             txtDescuentos.Clear();
             txtIDLIQUIDACIÓN.Clear();
             cmbPeriodo.SelectedIndex = 0;
+            cmbEmpleado.SelectedIndex = 0;
             
             
         }

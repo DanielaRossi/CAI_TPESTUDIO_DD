@@ -92,31 +92,35 @@ namespace TPEstudio
         {
             try
             {
+                //List<Empleado> _empleadosporempresa = new List<Empleado>();
+                //Empresa empresa= (Empresa)cmbEmpresa.SelectedItem;
+                //_empleados = _empleadoNegocio.TraerTodos();
+
+
+                //foreach (Empleado em in _empleados)
+                //{
+                //    if (em.IdEmpresa.Equals(empresa.Id))
+                //    {
+                //        _empleadosporempresa.Add(em);
+                //    }
+
+                //}
+                //if(_empleadosporempresa == null)
+                //{
+                //    throw new Exception("No hay empleados en la empresa.");
+                //}
+
+                //lstEmpleadosporempresa.DataSource = null;
+                //lstEmpleadosporempresa.DataSource = _empleadosporempresa;
+                
                 List<Empleado> _empleadosporempresa = new List<Empleado>();
-                Empresa empresa= (Empresa)cmbEmpresa.SelectedItem;
-                _empleados = _empleadoNegocio.TraerTodos();
-
-
-                foreach (Empleado em in _empleados)
-                {
-                    if (em.IdEmpresa.Equals(empresa.Id))
-                    {
-                        _empleadosporempresa.Add(em);
-                    }
-
-                }
-                if(_empleadosporempresa == null)
-                {
-                    throw new Exception("No hay empleados en la empresa.");
-                }
+                Empresa empresa = (Empresa)cmbEmpresa.SelectedItem;
+                _empleadosporempresa = _empleadoNegocio.TraerEmpleadosporempresa(empresa);
 
                 lstEmpleadosporempresa.DataSource = null;
                 lstEmpleadosporempresa.DataSource = _empleadosporempresa;
-
-
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

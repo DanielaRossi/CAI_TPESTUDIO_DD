@@ -29,6 +29,7 @@ namespace TPEstudio.Entidades
             _fechaAlta = DateTime.Today;
             
         }
+        
         public override string ToString()
         {
             return $"{this.Id}) {this.RazonSocial}- Cuil: {this.Cuit}-Domicilio: {this._domicilio}-Fecha de alta: { this._fechaAlta}";
