@@ -54,7 +54,7 @@ namespace TPEstudio
         {
             lstLiquidaciones.DataSource = null;
             lstLiquidaciones.DataSource = liquidacionesNegocio.TraerTodas();
-            //lstLiquidaciones.DisplayMember = "Mostrar";
+            lstLiquidaciones.DisplayMember = "Mostrar";
 
         }
 

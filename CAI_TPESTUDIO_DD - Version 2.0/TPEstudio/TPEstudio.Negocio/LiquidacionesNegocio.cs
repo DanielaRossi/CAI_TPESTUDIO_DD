@@ -27,10 +27,10 @@ namespace TPEstudio.Negocio
         }
         public List<Liquidaciones> TraerTodas()
         {
-            _liquidaciones = liquidacionesMapper.Traer();
+            
             _empleados = _empleadoNegocio.TraerTodos();
 
-            foreach (var liquidaciones in _liquidaciones)
+            foreach (var liquidaciones in liquidacionesMapper.Traer())
             {
                 foreach (var empleado in _empleados)
                 {
@@ -50,8 +50,9 @@ namespace TPEstudio.Negocio
             }
 
 
-            
+
             return _liquidaciones;
+            
         }
         public Liquidaciones Traerporidliquidacion(int idLiquidacion)
         {
@@ -74,22 +75,33 @@ namespace TPEstudio.Negocio
         }
         public List<Liquidaciones> Traerliquidacionesporcategoria(int idcategoria)
         {
+            //List<Liquidaciones> liquidacionesporcategoria = new List<Liquidaciones>();
+
+            //foreach(Liquidaciones l in liquidacionesMapper.Traer())
+            //{
+            //    foreach(Empleado e in _empleadoMapper.Traer())
+            //    {
+            //        if(e.IdCategoria == idcategoria)
+            //        {
+            //            liquidacionesporcategoria.Add(l);
+            //        }
+            //    }
+            //    //if (l.Empleados.Categorias.Id == idcategoria)
+            //    //{
+            //    //    
+            //    //}
+            //}
+            //return liquidacionesporcategoria;
             List<Liquidaciones> liquidacionesporcategoria = new List<Liquidaciones>();
-            foreach(Liquidaciones l in liquidacionesMapper.Traer())
+            foreach ( Liquidaciones l in _liquidaciones)
             {
-                foreach(Empleado e in _empleadoMapper.Traer())
+                if(l.Empleados.IdCategoria== idcategoria)
                 {
-                    if(e.IdCategoria == idcategoria)
-                    {
-                        liquidacionesporcategoria.Add(l);
-                    }
+                    liquidacionesporcategoria.Add(l);
                 }
-                //if (l.Empleados.Categorias.Id == idcategoria)
-                //{
-                //    
-                //}
             }
             return liquidacionesporcategoria;
+
         }
         public void Alta(Empleado empleado, int idempleado, int periodo, string codigo, double bruto, double descuentos)
         {
