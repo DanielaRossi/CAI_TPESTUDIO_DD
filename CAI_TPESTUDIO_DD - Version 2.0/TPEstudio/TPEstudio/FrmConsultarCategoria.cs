@@ -70,7 +70,7 @@ namespace TPEstudio
 
                 foreach (Liquidaciones liq in lst)
                 {
-                    if (liq.Empleados.Categorias.Id == l.Id)
+                    if (liq.Empleados.Categorias.Id.Equals(l.Empleados.Categorias.Id))
                     {
                         
                         txtResultado.Text = liq.Empleados.Categorias.Id.ToString();

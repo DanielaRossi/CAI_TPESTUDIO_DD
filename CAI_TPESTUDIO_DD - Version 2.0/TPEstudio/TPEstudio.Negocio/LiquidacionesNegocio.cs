@@ -82,10 +82,10 @@ namespace TPEstudio.Negocio
             }
             return liquidacionesporcategoria;
         }
-        public void Alta(int idempleado, int periodo, string codigo, double bruto, double descuentos)
+        public void Alta(Empleado empleado, int idempleado, int periodo, string codigo, double bruto, double descuentos)
         {
 
-            Liquidaciones l = new Liquidaciones(idempleado, codigo, periodo, bruto, descuentos);
+            Liquidaciones l = new Liquidaciones(empleado, idempleado, codigo, periodo, bruto, descuentos);
 
             TransactionResult result = liquidacionesMapper.Insertar(l);
 

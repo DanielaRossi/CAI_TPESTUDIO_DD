@@ -24,13 +24,15 @@ namespace TPEstudio.Entidades
        
         
 
-        public Empleado(int idempresa, int idcategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
+        public Empleado(Categoria categoria, int idempresa, int idcategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
         {
 
             this.IdCategoria = idcategoria;
             this.IdEmpresa = idempresa;
             this._cuil = cuil;
             this._fechaNacimiento = fechanacimeinto;
+            this._categorias = categoria;
+            
         }
         public Empleado()
         {
@@ -57,7 +59,7 @@ namespace TPEstudio.Entidades
         internal override string Display()
         {
             
-                return $"{this.Nombre}-{this.Apellido}-Cuil:{this._cuil}";
+                return $"{this.Nombre}-{this.Apellido}-Cuil:{this._cuil}-{this.Categorias}";
             
         }
         public override bool Equals(object obj)

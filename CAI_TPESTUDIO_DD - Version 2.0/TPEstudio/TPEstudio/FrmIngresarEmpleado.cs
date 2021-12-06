@@ -58,6 +58,7 @@ namespace TPEstudio
             Categorialst.Insert(0, new Categoria("--Seleccione-- ","", 0));
             cmbCategoria.DataSource = null;
             cmbCategoria.DataSource = Categorialst;
+            
            
             cmbCategoria.DisplayMember = "NombreyConvenio";
             cmbCategoria.ValueMember = "Id";

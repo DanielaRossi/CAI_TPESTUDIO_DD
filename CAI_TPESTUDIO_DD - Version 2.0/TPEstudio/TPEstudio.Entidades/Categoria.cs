@@ -20,6 +20,9 @@ namespace TPEstudio.Entidades
             _convenio = convenio;
             _sueldoBasico = sueldoBasico;
         }
+        public Categoria() { }
+
+
         
 
         public int Id { get => _id; set => _id = value; }

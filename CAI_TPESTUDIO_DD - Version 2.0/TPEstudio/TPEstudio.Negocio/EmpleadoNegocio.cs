@@ -33,6 +33,7 @@ namespace TPEstudio.Negocio
                 //_empleado = _empleadoMapper.Traer();
                 //_categorias = _categoriaMapper.Traer();
 
+
                 foreach (var empleado in _empleadoMapper.Traer())
                 {
                     //    foreach (var liquidaciones in _liquidaciones)
@@ -40,7 +41,7 @@ namespace TPEstudio.Negocio
                     //        if (empleado.Id == liquidaciones.IdEmpleado)
                     //            empleado.Liq = liquidaciones;
                     //    }
-                    foreach (var categoria in _categorias)
+                    foreach (var categoria in _categoriaMapper.Traer()) 
                 {
                     if (empleado.IdCategoria == categoria.Id)
                         empleado.Categorias = categoria;
@@ -140,7 +141,7 @@ namespace TPEstudio.Negocio
                 throw new Exception("Seleccione una empresa.");
             }
 
-            Empleado empleado = new Empleado(empresa.Id, categoria.Id,cuil, nombre, apellido, fechanacimiento);
+            Empleado empleado = new Empleado(categoria,empresa.Id, categoria.Id,cuil, nombre, apellido, fechanacimiento);
             
             foreach(Empleado e in _empleadoMapper.Traer())
             {

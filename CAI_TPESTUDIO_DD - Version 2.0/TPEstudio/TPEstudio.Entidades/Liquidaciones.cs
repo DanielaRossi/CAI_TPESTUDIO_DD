@@ -17,11 +17,11 @@ namespace TPEstudio.Entidades
         private DateTime _fechaAlta;
         private Empleado _empleados;
 
-        public Liquidaciones( int idEmpleado, string codigoTransferencia, int periodo, double bruto, double descuentos)
+        public Liquidaciones( Empleado empleado, int idEmpleado, string codigoTransferencia, int periodo, double bruto, double descuentos)
         {
 
             _idEmpleado = idEmpleado;
-            _empleados = new Empleado();
+            _empleados = empleado;
             _codigoTransferencia = codigoTransferencia;
             _periodo = periodo;
             _bruto = bruto;
@@ -40,17 +40,17 @@ namespace TPEstudio.Entidades
         public double Bruto { get => _bruto; set => _bruto = value; }
         public double Descuentos { get => _descuentos; set => _descuentos = value; }
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
-        //public Empleado Empleado { get => _empleado; set => _empleado = value; }
+        
         public Empleado Empleados { get => _empleados; set => _empleados = value; }
 
         public override string ToString()
         {
-            return $"{this.Id}) Id del empleado:{this._idEmpleado}-Codigo Transferencia{this.CodigoTransferencia}";
+            return $"{this.Id}) Empleado:{this._empleados.Display()}-Codigo Transferencia{this.CodigoTransferencia}";
         }
         public string Mostrar 
         { get
             {
-                return $"{this.Id}) Id del empleado:{this.Empleados.Display()}-Codigo Transferencia{this.CodigoTransferencia}";
+                return $"{this.Id}) Empleado:{this.Empleados.Display()}-Codigo Transferencia{this.CodigoTransferencia}";
             }
         }
 
