@@ -28,10 +28,10 @@ namespace TPEstudio.Entidades
             _descuentos = descuentos;
             
         }
-        public Liquidaciones()
-        {
+        //public Liquidaciones()
+        //{
 
-        }
+        //}
 
         public int Id { get => _id; set => _id = value; }
         public int IdEmpleado { get => _idEmpleado; set => _idEmpleado = value; }
@@ -50,7 +50,7 @@ namespace TPEstudio.Entidades
         public string Mostrar 
         { get
             {
-                return $"{this.Id}) Id del empleado:{this._idEmpleado}-Codigo Transferencia{this.CodigoTransferencia}";
+                return $"{this.Id}) Id del empleado:{this.Empleados.Display()}-Codigo Transferencia{this.CodigoTransferencia}";
             }
         }
 

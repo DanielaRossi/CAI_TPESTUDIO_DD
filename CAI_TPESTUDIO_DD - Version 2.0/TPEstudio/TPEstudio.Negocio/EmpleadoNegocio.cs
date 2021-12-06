@@ -29,22 +29,22 @@ namespace TPEstudio.Negocio
         {
             try
             {
-                _liquidaciones = _liquidacionesMapper.Traer();
-                _empleado = _empleadoMapper.Traer();
-                _categorias = _categoriaMapper.Traer();
+                //_liquidaciones = _liquidacionesMapper.Traer();
+                //_empleado = _empleadoMapper.Traer();
+                //_categorias = _categoriaMapper.Traer();
 
-                foreach (var empleado in _empleado)
+                foreach (var empleado in _empleadoMapper.Traer())
                 {
-                    foreach (var liquidaciones in _liquidaciones)
-                    {
-                        if (empleado.Id == liquidaciones.IdEmpleado)
-                            empleado.Liq = liquidaciones;
-                    }
-                    foreach(var categoria in _categorias)
-                    {
-                        if (empleado. IdCategoria == categoria.Id)
-                            empleado.Categorias = categoria;
-                    }
+                    //    foreach (var liquidaciones in _liquidaciones)
+                    //    {
+                    //        if (empleado.Id == liquidaciones.IdEmpleado)
+                    //            empleado.Liq = liquidaciones;
+                    //    }
+                    foreach (var categoria in _categorias)
+                {
+                    if (empleado.IdCategoria == categoria.Id)
+                        empleado.Categorias = categoria;
+                }
 
 
                 }

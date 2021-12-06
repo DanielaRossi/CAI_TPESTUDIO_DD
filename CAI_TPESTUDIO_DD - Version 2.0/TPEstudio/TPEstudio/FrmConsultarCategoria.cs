@@ -40,34 +40,40 @@ namespace TPEstudio
 
         private void FrmConsultarCategoria_Load(object sender, EventArgs e)
         {
-            _categorias = _categoriaNegocio.TraerTodas();
-            lstCategoria.DataSource = null;
-            lstCategoria.DataSource = _categorias;
+            
+            CargarLista();
             CargarCombo();
         }
         private void CargarCombo()
         {
             cmbLiquidación.DataSource = null;
             cmbLiquidación.DataSource = _liquidacionesNegocio.TraerTodas();
-            cmbLiquidación.DisplayMember = "Id";
+            cmbLiquidación.DisplayMember = "Mostrar";
             cmbLiquidación.ValueMember = "Id";
             
+        }
+        private void CargarLista()
+        {
+            _categorias = _categoriaNegocio.TraerTodas();
+            lstCategoria.DataSource = null;
+            lstCategoria.DataSource = _categorias;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
-                Liquidaciones id = (Liquidaciones)cmbLiquidación.SelectedItem;
-                _empleados = empleadoNegocio.TraerTodos();
+                Liquidaciones l = (Liquidaciones)cmbLiquidación.SelectedItem;
+                //_empleados = empleadoNegocio.TraerTodos();
+                List<Liquidaciones> lst=_liquidacionesNegocio.TraerTodas();
 
 
-                foreach (Empleado em in _empleados)
+                foreach (Liquidaciones liq in lst)
                 {
-                    if (em.Liq == id)
+                    if (liq.Empleados.Categorias.Id == l.Id)
                     {
                         
-                        txtResultado.Text = em.IdCategoria.ToString();
+                        txtResultado.Text = liq.Empleados.Categorias.Id.ToString();
                     }
                 }
 

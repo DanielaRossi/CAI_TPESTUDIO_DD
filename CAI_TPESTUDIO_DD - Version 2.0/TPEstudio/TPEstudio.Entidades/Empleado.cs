@@ -18,7 +18,7 @@ namespace TPEstudio.Entidades
         private DateTime _fechaNacimiento;
         private DateTime _fechaAlta;
         private bool _activo;
-        private Liquidaciones _liquidacion;
+        
         private Categoria _categorias;
         
        
@@ -37,7 +37,7 @@ namespace TPEstudio.Entidades
 
         }
             
-        public Liquidaciones Liq { get => _liquidacion; set => _liquidacion = value; }
+        
         public int Id { get => _id; set => _id = value; }
         //public Empresa Empresa { get => _empresa; set => _empresa = value; }
         //public Categoria Categoria { get => _categoria; set => _categoria = value; }

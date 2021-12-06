@@ -28,9 +28,9 @@ namespace TPEstudio.Negocio
             _liquidaciones = liquidacionesMapper.Traer();
             _empleados = _empleadoMapper.Traer();
 
-            foreach (var empleado in _empleados)
+            foreach (var liquidaciones in _liquidaciones)
             {
-                foreach (var liquidaciones in _liquidaciones)
+                foreach (var empleado in _empleados)
                 {
                     if (empleado.Id == liquidaciones.IdEmpleado)
                         //empleado.Liq = liquidaciones;
@@ -46,8 +46,8 @@ namespace TPEstudio.Negocio
         }
         public Liquidaciones Traerporidliquidacion(int idLiquidacion)
         {
-            Liquidaciones liquidacionporid = new Liquidaciones();
-            foreach ( Liquidaciones l in liquidacionesMapper.Traer())
+            Liquidaciones liquidacionporid = null;
+            foreach ( Liquidaciones l in _liquidaciones)
             {
                 if(l.Id == idLiquidacion)
                 {

@@ -16,6 +16,7 @@ namespace TPEstudio
     {
         private LiquidacionesNegocio liquidacionesNegocio;
         private CategoriaNegocio categoriaNegocio;
+       
         
         public FrmConsultarLiquidaciones(Form propietario)
         {
@@ -23,6 +24,7 @@ namespace TPEstudio
             this.Owner = propietario;
             liquidacionesNegocio = new LiquidacionesNegocio();
             categoriaNegocio = new CategoriaNegocio();
+            
         }
 
         private void FrmConsultarLiquidaciones_Load(object sender, EventArgs e)
@@ -52,6 +54,7 @@ namespace TPEstudio
         {
             lstLiquidaciones.DataSource = null;
             lstLiquidaciones.DataSource = liquidacionesNegocio.TraerTodas();
+            //lstLiquidaciones.DisplayMember = "Mostrar";
 
         }
 
