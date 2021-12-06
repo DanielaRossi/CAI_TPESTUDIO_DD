@@ -14,6 +14,7 @@ namespace TPEstudio.Negocio
         private List<Liquidaciones> _liquidaciones;
         private List<Empleado> _empleados;
         private EmpleadoMapper _empleadoMapper;
+        private EmpleadoNegocio _empleadoNegocio;
 
         public LiquidacionesNegocio()
         {
@@ -21,20 +22,28 @@ namespace TPEstudio.Negocio
             _empleadoMapper = new EmpleadoMapper();
             _empleados = new List<Empleado>();
             _liquidaciones = new List<Liquidaciones>();
+            _empleadoNegocio = new EmpleadoNegocio();
 
         }
         public List<Liquidaciones> TraerTodas()
         {
             _liquidaciones = liquidacionesMapper.Traer();
-            _empleados = _empleadoMapper.Traer();
+            _empleados = _empleadoNegocio.TraerTodos();
 
             foreach (var liquidaciones in _liquidaciones)
             {
                 foreach (var empleado in _empleados)
                 {
                     if (empleado.Id == liquidaciones.IdEmpleado)
+                    {
                         //empleado.Liq = liquidaciones;
                         liquidaciones.Empleados = empleado;
+                        
+                    }
+                        
+                    
+
+
                 }
 
 

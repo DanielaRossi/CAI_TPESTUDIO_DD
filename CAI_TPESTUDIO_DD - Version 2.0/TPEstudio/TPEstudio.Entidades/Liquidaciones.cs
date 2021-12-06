@@ -45,12 +45,14 @@ namespace TPEstudio.Entidades
 
         public override string ToString()
         {
-            return $"{this.Id}) Empleado:{this._empleados.Display()}-Codigo Transferencia{this.CodigoTransferencia}";
+            return $"{this.Id}) -Empleado: { this.Empleados.Display()}-Codigo Transferencia{this.CodigoTransferencia}";
+        
         }
         public string Mostrar 
         { get
             {
-                return $"{this.Id}) Empleado:{this.Empleados.Display()}-Codigo Transferencia{this.CodigoTransferencia}";
+                return $"{this.Id})-Empleado: { this.Empleados.Display()}-Codigo Transferencia{this.CodigoTransferencia}";
+            
             }
         }
 
