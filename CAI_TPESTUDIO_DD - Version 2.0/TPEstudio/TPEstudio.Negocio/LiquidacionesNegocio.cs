@@ -37,7 +37,7 @@ namespace TPEstudio.Negocio
                 {
                     if (empleado.Id == liquidaciones.IdEmpleado)
                     {
-                        //empleado.Liq = liquidaciones;
+                        
                         liquidaciones.Empleados = empleado;
                         
                     }
@@ -76,23 +76,7 @@ namespace TPEstudio.Negocio
         }
         public List<Liquidaciones> Traerliquidacionesporcategoria(int idcategoria)
         {
-            //List<Liquidaciones> liquidacionesporcategoria = new List<Liquidaciones>();
-
-            //foreach(Liquidaciones l in liquidacionesMapper.Traer())
-            //{
-            //    foreach(Empleado e in _empleadoMapper.Traer())
-            //    {
-            //        if(e.IdCategoria == idcategoria)
-            //        {
-            //            liquidacionesporcategoria.Add(l);
-            //        }
-            //    }
-            //    //if (l.Empleados.Categorias.Id == idcategoria)
-            //    //{
-            //    //    
-            //    //}
-            //}
-            //return liquidacionesporcategoria;
+            
             List<Liquidaciones> liquidacionesporcategoria = new List<Liquidaciones>();
             foreach ( Liquidaciones l in _liquidaciones)
             {
@@ -101,12 +85,30 @@ namespace TPEstudio.Negocio
                     liquidacionesporcategoria.Add(l);
                 }
             }
+            if (liquidacionesporcategoria.Count == 0)
+            {
+                throw new Exception("La categoría seleccionada no tiene liquidaciones.");
+            }
             return liquidacionesporcategoria;
 
         }
         public void Alta(Empleado empleado, int idempleado, int periodo, string codigo, double bruto, double descuentos)
         {
-
+            if (idempleado == 0)
+            {
+                throw new Exception("Debe seleccionar un empleado.");
+            }
+            if (periodo == 0)
+            {
+                throw new Exception("Debe seleccionar un período.");
+            }
+            //foreach(Liquidaciones li in _liquidaciones)
+            //{
+            //    if(li.IdEmpleado.Equals(idempleado)&& li.Periodo.Equals(periodo))
+            //    {
+            //        throw new Exception("Ya ingresó una liquidación para ese mes para ese empleado.");
+            //    }
+            //}
             Liquidaciones l = new Liquidaciones(empleado, idempleado, codigo, periodo, bruto, descuentos);
 
             TransactionResult result = liquidacionesMapper.Insertar(l);

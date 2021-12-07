@@ -28,10 +28,7 @@ namespace TPEstudio.Entidades
             _descuentos = descuentos;
             
         }
-        //public Liquidaciones()
-        //{
-
-        //}
+        
 
         public int Id { get => _id; set => _id = value; }
         public int IdEmpleado { get => _idEmpleado; set => _idEmpleado = value; }

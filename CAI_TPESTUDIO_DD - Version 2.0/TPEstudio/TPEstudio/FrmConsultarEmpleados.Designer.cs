@@ -105,7 +105,7 @@ namespace TPEstudio
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(433, 121);
+            this.label4.Location = new System.Drawing.Point(57, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 7;
@@ -113,9 +113,9 @@ namespace TPEstudio
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(558, 116);
+            this.txtResultado.Location = new System.Drawing.Point(146, 116);
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(354, 22);
+            this.txtResultado.Size = new System.Drawing.Size(766, 22);
             this.txtResultado.TabIndex = 8;
             // 
             // label5

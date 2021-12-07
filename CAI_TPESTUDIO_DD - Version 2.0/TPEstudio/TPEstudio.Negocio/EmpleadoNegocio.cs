@@ -16,6 +16,7 @@ namespace TPEstudio.Negocio
         private List<Empleado> _empleado;
         private List<Liquidaciones> _liquidaciones;
         private List<Categoria> _categorias;
+        private EmpresaMapper _empresaMapper;
         public EmpleadoNegocio()
         {
             _empleadoMapper = new EmpleadoMapper();
@@ -24,28 +25,30 @@ namespace TPEstudio.Negocio
             _empleado = new List<Empleado>();
             _categoriaMapper = new CategoriaMapper();
             _categorias = new List<Categoria>();
+            _empresaMapper = new EmpresaMapper();
         }
         public List<Empleado> TraerTodos()
         {
             try
             {
-                //_liquidaciones = _liquidacionesMapper.Traer();
+                
                 _empleado = _empleadoMapper.Traer();
-                //_categorias = _categoriaMapper.Traer();
+                
 
 
                 foreach (var empleado in _empleado)
                 {
-                    //    foreach (var liquidaciones in _liquidaciones)
-                    //    {
-                    //        if (empleado.Id == liquidaciones.IdEmpleado)
-                    //            empleado.Liq = liquidaciones;
-                    //    }
+                    
                     foreach (var categoria in _categoriaMapper.Traer()) 
                 {
                     if (empleado.IdCategoria == categoria.Id)
                         empleado.Categorias = categoria;
                 }
+                    foreach(var empresa in _empresaMapper.Traer())
+                    {
+                        if (empleado.IdEmpresa == empresa.Id)
+                            empleado.Empresas = empresa;
+                    }
 
 
                 }
@@ -77,37 +80,7 @@ namespace TPEstudio.Negocio
 
 
         }
-        //public Empleado TraerEmpleadosporEmpresa(int idEmpresa)
-        //{
-        //    try
-        //    {
-
-        //        _empleado = _empleadoMapper.Traer();
-        //        Empleado resultado = null;
-
-        //        foreach (var empleado in _empleado)
-        //        {
-
-        //            if (empleado.IdEmpresa == idEmpresa)
-        //                resultado = empleado;
-
-
-
-        //        }
-
-
-        //        return resultado;
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception("No se puedo traer a los empleados");
-        //    }
-
-
-
-        //}
+        
         public List<Empleado> TraerEmpleadosporempresa(Empresa empresa)
         {
             List<Empleado> _empleadosporempresa = new List<Empleado>();
@@ -141,7 +114,7 @@ namespace TPEstudio.Negocio
                 throw new Exception("Seleccione una empresa.");
             }
 
-            Empleado empleado = new Empleado(categoria,empresa.Id, categoria.Id,cuil, nombre, apellido, fechanacimiento);
+            Empleado empleado = new Empleado(categoria,empresa, empresa.Id, categoria.Id,cuil, nombre, apellido, fechanacimiento);
             
             foreach(Empleado e in _empleadoMapper.Traer())
             {

@@ -49,7 +49,7 @@ namespace TPEstudio
         private void Cargarcombos()
         {
             List<Empleado> Empleadolst = _empleadoNegocio.TraerTodos();
-            Empleadolst.Insert(0, new Empleado(null,0, 0, 0, "--Seleccione--", "", DateTime.Now));
+            Empleadolst.Insert(0, new Empleado(null,null,0, 0, 0, "--Seleccione--", "", DateTime.Now));
             
             cmbEmpleado.DataSource = null;
             cmbEmpleado.DataSource = Empleadolst;
@@ -75,6 +75,8 @@ namespace TPEstudio
                 
                 Empleado empleado = (Empleado)cmbEmpleado.SelectedItem;
 
+                
+
                 liquidacionesNegocio.Alta(empleado, empleado.Id,(int)periodo,codigotransferencia, bruto,descuento);
                 Limpiar();
                 MessageBox.Show("La liquidación se agregó con exito");
@@ -87,12 +89,16 @@ namespace TPEstudio
         }
         private void Limpiar()
         {
-            txtCodigoTransferencia.Clear();
-            txtbruto.Clear();
-            txtDescuentos.Clear();
-            txtIDLIQUIDACIÓN.Clear();
-            cmbPeriodo.SelectedIndex = 0;
-            cmbEmpleado.SelectedIndex = 0;
+            
+                txtCodigoTransferencia.Clear();
+                txtbruto.Clear();
+                txtDescuentos.Clear();
+                txtIDLIQUIDACIÓN.Clear();
+                cmbPeriodo.SelectedIndex = 0;
+                cmbEmpleado.SelectedIndex = 0;
+            
+            
+            
             
             
         }

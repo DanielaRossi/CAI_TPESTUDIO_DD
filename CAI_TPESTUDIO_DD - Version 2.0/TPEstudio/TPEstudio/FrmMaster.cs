@@ -28,8 +28,16 @@ namespace TPEstudio
 
         private void btnLiquidaciones_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            _frmLiquidaciones.Show();
+            try
+            {
+                this.Hide();
+                _frmLiquidaciones.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,21 +47,45 @@ namespace TPEstudio
 
         private void btnEmpresa_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            _frmEmpresas.Show();
+            try
+            {
+                this.Hide();
+                _frmEmpresas.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            _frmEmpleados.Show();
+            
+            try
+            {
+                this.Hide();
+                _frmEmpleados.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            _frmCategorias.Show();
+            
+            try
+            {
+                this.Hide();
+                _frmCategorias.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

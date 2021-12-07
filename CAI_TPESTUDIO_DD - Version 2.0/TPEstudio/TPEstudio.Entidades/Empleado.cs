@@ -11,8 +11,7 @@ namespace TPEstudio.Entidades
         private int _id;
         private int _idEmpresa;
         private int _idCategoria;
-        //private Categoria _categoria;
-        //private Empresa _empresa;
+        
         private long _cuil;
       
         private DateTime _fechaNacimiento;
@@ -20,11 +19,12 @@ namespace TPEstudio.Entidades
         private bool _activo;
         
         private Categoria _categorias;
+        private Empresa _empresa;
         
        
         
 
-        public Empleado(Categoria categoria, int idempresa, int idcategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
+        public Empleado(Categoria categoria,Empresa empresa, int idempresa, int idcategoria, long cuil, string nombre, string apellido, DateTime fechanacimeinto) : base(nombre, apellido)
         {
 
             this.IdCategoria = idcategoria;
@@ -32,6 +32,7 @@ namespace TPEstudio.Entidades
             this._cuil = cuil;
             this._fechaNacimiento = fechanacimeinto;
             this._categorias = categoria;
+            this._empresa = empresa;
             
         }
         public Empleado()
@@ -41,8 +42,7 @@ namespace TPEstudio.Entidades
             
         
         public int Id { get => _id; set => _id = value; }
-        //public Empresa Empresa { get => _empresa; set => _empresa = value; }
-        //public Categoria Categoria { get => _categoria; set => _categoria = value; }
+       
         public long Cuil { get => _cuil; set => _cuil = value; }
         
         public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
@@ -51,6 +51,7 @@ namespace TPEstudio.Entidades
         public int IdEmpresa { get => _idEmpresa; set => _idEmpresa = value; }
         public int IdCategoria { get => _idCategoria; set => _idCategoria = value; }
         public Categoria Categorias { get => _categorias; set => _categorias = value; }
+        public Empresa Empresas { get => _empresa; set => _empresa = value; }
 
         public override string ToString()
         {

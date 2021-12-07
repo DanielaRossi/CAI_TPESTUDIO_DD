@@ -61,29 +61,30 @@ namespace TPEstudio
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            
-            //try
-            //{
-            //    Liquidaciones id = (Liquidaciones)cmbLiquidacion.SelectedItem;
-            //    _empleados = _empleadoNegocio.TraerTodos();
+            try
+            {
+                Liquidaciones l = (Liquidaciones)cmbLiquidacion.SelectedItem;
                 
-                   
-            //            foreach (Empleado em in _empleados)
-            //            {
-            //                if (em.Liq == id)
-            //                {
-            //                    txtResultado.Text = em.ToString();
-            //                }
-                    
-            //            }
-                    
-                
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+                List<Liquidaciones> lst = _liquidacionesNegocio.TraerTodas();
+
+
+                foreach (Liquidaciones liq in lst)
+                {
+                    if (liq.Empleados.Equals(l.Empleados))
+                    {
+
+                        txtResultado.Text = liq.Empleados.ToString();
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
 
 
         }
@@ -92,26 +93,7 @@ namespace TPEstudio
         {
             try
             {
-                //List<Empleado> _empleadosporempresa = new List<Empleado>();
-                //Empresa empresa= (Empresa)cmbEmpresa.SelectedItem;
-                //_empleados = _empleadoNegocio.TraerTodos();
-
-
-                //foreach (Empleado em in _empleados)
-                //{
-                //    if (em.IdEmpresa.Equals(empresa.Id))
-                //    {
-                //        _empleadosporempresa.Add(em);
-                //    }
-
-                //}
-                //if(_empleadosporempresa == null)
-                //{
-                //    throw new Exception("No hay empleados en la empresa.");
-                //}
-
-                //lstEmpleadosporempresa.DataSource = null;
-                //lstEmpleadosporempresa.DataSource = _empleadosporempresa;
+                
                 
                 List<Empleado> _empleadosporempresa = new List<Empleado>();
                 Empresa empresa = (Empresa)cmbEmpresa.SelectedItem;

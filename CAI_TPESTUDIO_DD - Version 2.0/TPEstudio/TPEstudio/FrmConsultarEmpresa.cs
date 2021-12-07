@@ -64,5 +64,31 @@ namespace TPEstudio
             OperadorEmpresas _operadorEmpresa = new OperadorEmpresas(_empresas);
             txtCantidadempresas.Text = _operadorEmpresa.Cantidad.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Liquidaciones l = (Liquidaciones)cmbLiquidacion.SelectedItem;
+                
+                List<Liquidaciones> lst = _liquidacionesNegocio.TraerTodas();
+
+
+                foreach (Liquidaciones liq in lst)
+                {
+                    if (liq.Empleados.Empresas.Id.Equals(l.Empleados.Empresas.Id))
+                    {
+
+                        txtRespuesta.Text = liq.Empleados.Empresas.RazonSocial.ToString();
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

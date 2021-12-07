@@ -22,17 +22,7 @@ namespace TPEstudio.AccesoDatos
             List<Liquidaciones> lst = JsonConvert.DeserializeObject<List<Liquidaciones>>(json);
             return lst;
         }
-        //public Liquidaciones TraerporidLiquidación(int id)
-        //{
-        //    string json = WebHelper.Get("/EstudioContable/Liquidaciones");
-        //    Liquidaciones lst = MapListporidLiquidacion(json);
-        //    return lst;
-        //}
-        //public Liquidaciones MapListporidLiquidacion(string json)
-        //{
-        //    Liquidaciones lst = JsonConvert.DeserializeObject<Liquidaciones>(json);
-        //    return lst;
-        //}
+        
 
 
         public TransactionResult Insertar(Liquidaciones liquidaciones)

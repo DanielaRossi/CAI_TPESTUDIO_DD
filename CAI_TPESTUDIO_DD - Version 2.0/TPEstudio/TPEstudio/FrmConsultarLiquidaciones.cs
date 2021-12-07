@@ -89,10 +89,18 @@ namespace TPEstudio
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Categoria categoria = (Categoria)cmbCategoria.SelectedItem;
-            List<Liquidaciones> lst = liquidacionesNegocio.Traerliquidacionesporcategoria(categoria.Id);
-            lstLiquidacionporcategoria.DataSource = null;
-            lstLiquidacionporcategoria.DataSource = lst;
+            try
+            {
+                Categoria categoria = (Categoria)cmbCategoria.SelectedItem;
+                List<Liquidaciones> lst = liquidacionesNegocio.Traerliquidacionesporcategoria(categoria.Id);
+                lstLiquidacionporcategoria.DataSource = null;
+                lstLiquidacionporcategoria.DataSource = lst;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
