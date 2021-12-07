@@ -46,6 +46,7 @@ namespace TPEstudio
         }
         private void CargarCombo()
         {
+            
             cmbLiquidación.DataSource = null;
             cmbLiquidación.DataSource = _liquidacionesNegocio.TraerTodas();
             //cmbLiquidación.DisplayMember = "Mostrar";

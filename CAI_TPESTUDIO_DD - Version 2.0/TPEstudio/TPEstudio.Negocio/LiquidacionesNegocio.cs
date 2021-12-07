@@ -27,7 +27,7 @@ namespace TPEstudio.Negocio
         }
         public List<Liquidaciones> TraerTodas()
         {
-            
+            liquidacionesMapper = new LiquidacionesMapper();
             _empleados = _empleadoNegocio.TraerTodos();
             _liquidaciones = liquidacionesMapper.Traer();
 
