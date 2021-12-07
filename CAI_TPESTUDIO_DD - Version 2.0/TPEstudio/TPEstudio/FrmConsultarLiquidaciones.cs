@@ -37,7 +37,8 @@ namespace TPEstudio
         {
             cmbLiquidacion.DataSource = null;
             cmbLiquidacion.DataSource = liquidacionesNegocio.TraerTodas();
-            cmbLiquidacion.DisplayMember = "Mostrar";
+            //cmbLiquidacion.DisplayMember = "Mostrar";
+            cmbLiquidacion.DisplayMember = "Detalledeliquidacion";
             cmbLiquidacion.ValueMember = "Id";
             cmbCategoria.DataSource = null;
             cmbCategoria.DataSource = categoriaNegocio.TraerTodas();

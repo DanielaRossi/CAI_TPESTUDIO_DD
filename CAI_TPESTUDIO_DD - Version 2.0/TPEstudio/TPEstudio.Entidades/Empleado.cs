@@ -59,10 +59,20 @@ namespace TPEstudio.Entidades
         }
         internal override string Display()
         {
+
+            return $"{this.Nombre}-{this.Apellido}-Cuil:{this._cuil}-{this.Categorias}";
+            /*return $"{this.Nombre}-{this.Apellido}-Cuil:{this._cuil}- Empresa: {this.Empresas.DetalleEmpresa}-/{this.Categorias.NombreyConvenio}*/
             
-                return $"{this.Nombre}-{this.Apellido}-Cuil:{this._cuil}-{this.Categorias}";
             
         }
+        public string DetalleEmpleado
+        {
+            get
+            {
+                return $"{this.Nombre}-{this.Apellido}-{this.Empresas.RazonSocial}";
+            }
+        }
+        
         public override bool Equals(object obj)
         {
             if (!(obj is Empleado))

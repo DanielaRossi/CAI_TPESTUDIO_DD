@@ -54,7 +54,8 @@ namespace TPEstudio
             cmbEmpleado.DataSource = null;
             cmbEmpleado.DataSource = Empleadolst;
             cmbEmpleado.DisplayMember = "ToString";
-            
+            //cmbEmpleado.DisplayMember = "DetalleEmpleado";
+
             cmbPeriodo.DataSource = Enum.GetValues(typeof(PeriodoEnum));
         }
 

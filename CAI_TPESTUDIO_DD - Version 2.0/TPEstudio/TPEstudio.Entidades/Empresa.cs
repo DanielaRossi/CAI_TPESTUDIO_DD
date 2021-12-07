@@ -34,6 +34,13 @@ namespace TPEstudio.Entidades
         {
             return $"{this.Id}) {this.RazonSocial}- Cuil: {this.Cuit}-Domicilio: {this._domicilio}-Fecha de alta: { this._fechaAlta}";
         }
+        public string DetalleEmpresa
+        {
+            get
+            {
+                return $"{this._razonSocial}";
+            }
+        }
         public override bool Equals(object obj)
         {
             if (!(obj is Empresa))

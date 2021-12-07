@@ -52,6 +52,20 @@ namespace TPEstudio.Entidades
             
             }
         }
+        public string Detalledeliquidacion
+        {
+            get
+            {
+                return $"{this.Id})-{this.Empleados.Apellido}-{this.Empleados.Nombre}-Empresa:{this.Empleados.Empresas.RazonSocial}";
+            }
+        }
+        public string Detalledeliquidacionsinempresa
+        {
+            get
+            {
+                return $"{this.Id})-{this.Empleados.Apellido}-{this.Empleados.Nombre}";
+            }
+        }
 
         
     }
