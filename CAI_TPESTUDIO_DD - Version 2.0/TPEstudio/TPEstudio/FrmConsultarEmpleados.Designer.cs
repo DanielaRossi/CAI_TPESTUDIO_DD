@@ -33,7 +33,6 @@ namespace TPEstudio
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.cmbLiquidacion = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +51,7 @@ namespace TPEstudio
             this.lstEmpleados.ItemHeight = 16;
             this.lstEmpleados.Location = new System.Drawing.Point(47, 444);
             this.lstEmpleados.Name = "lstEmpleados";
-            this.lstEmpleados.Size = new System.Drawing.Size(602, 116);
+            this.lstEmpleados.Size = new System.Drawing.Size(710, 116);
             this.lstEmpleados.TabIndex = 0;
             // 
             // button1
@@ -79,31 +78,23 @@ namespace TPEstudio
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(54, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(249, 17);
+            this.label2.Size = new System.Drawing.Size(214, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Buscar empleado por id de liquidación";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Ingrese el id de la liquidación";
+            this.label2.Text = "Buscar empleado por liquidación";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cmbLiquidacion
             // 
             this.cmbLiquidacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLiquidacion.FormattingEnabled = true;
-            this.cmbLiquidacion.Location = new System.Drawing.Point(293, 73);
+            this.cmbLiquidacion.Location = new System.Drawing.Point(60, 71);
             this.cmbLiquidacion.Name = "cmbLiquidacion";
-            this.cmbLiquidacion.Size = new System.Drawing.Size(121, 24);
+            this.cmbLiquidacion.Size = new System.Drawing.Size(852, 24);
             this.cmbLiquidacion.TabIndex = 5;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(488, 73);
+            this.button2.Location = new System.Drawing.Point(837, 32);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
@@ -114,7 +105,7 @@ namespace TPEstudio
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(57, 119);
+            this.label4.Location = new System.Drawing.Point(433, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 7;
@@ -122,7 +113,7 @@ namespace TPEstudio
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(209, 114);
+            this.txtResultado.Location = new System.Drawing.Point(558, 116);
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.Size = new System.Drawing.Size(354, 22);
             this.txtResultado.TabIndex = 8;
@@ -130,7 +121,7 @@ namespace TPEstudio
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 179);
+            this.label5.Location = new System.Drawing.Point(54, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(227, 17);
             this.label5.TabIndex = 9;
@@ -139,7 +130,7 @@ namespace TPEstudio
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 227);
+            this.label6.Location = new System.Drawing.Point(57, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(151, 17);
             this.label6.TabIndex = 10;
@@ -149,7 +140,7 @@ namespace TPEstudio
             // 
             this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmpresa.FormattingEnabled = true;
-            this.cmbEmpresa.Location = new System.Drawing.Point(308, 224);
+            this.cmbEmpresa.Location = new System.Drawing.Point(269, 211);
             this.cmbEmpresa.Name = "cmbEmpresa";
             this.cmbEmpresa.Size = new System.Drawing.Size(121, 24);
             this.cmbEmpresa.TabIndex = 11;
@@ -160,7 +151,7 @@ namespace TPEstudio
             this.lstEmpleadosporempresa.ItemHeight = 16;
             this.lstEmpleadosporempresa.Location = new System.Drawing.Point(47, 303);
             this.lstEmpleadosporempresa.Name = "lstEmpleadosporempresa";
-            this.lstEmpleadosporempresa.Size = new System.Drawing.Size(554, 84);
+            this.lstEmpleadosporempresa.Size = new System.Drawing.Size(710, 84);
             this.lstEmpleadosporempresa.TabIndex = 12;
             // 
             // label7
@@ -174,7 +165,7 @@ namespace TPEstudio
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(500, 220);
+            this.button3.Location = new System.Drawing.Point(447, 211);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 14;
@@ -197,7 +188,6 @@ namespace TPEstudio
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbLiquidacion);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -216,7 +206,6 @@ namespace TPEstudio
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbLiquidacion;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;

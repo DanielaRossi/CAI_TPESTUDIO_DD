@@ -48,7 +48,7 @@ namespace TPEstudio
             // _lblId
             // 
             this._lblId.AutoSize = true;
-            this._lblId.Location = new System.Drawing.Point(104, 147);
+            this._lblId.Location = new System.Drawing.Point(13, 140);
             this._lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblId.Name = "_lblId";
             this._lblId.Size = new System.Drawing.Size(71, 17);
@@ -58,7 +58,7 @@ namespace TPEstudio
             // _lblLegajo
             // 
             this._lblLegajo.AutoSize = true;
-            this._lblLegajo.Location = new System.Drawing.Point(100, 80);
+            this._lblLegajo.Location = new System.Drawing.Point(13, 67);
             this._lblLegajo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblLegajo.Name = "_lblLegajo";
             this._lblLegajo.Size = new System.Drawing.Size(112, 17);
@@ -68,7 +68,7 @@ namespace TPEstudio
             // _lblCodigoTransferencia
             // 
             this._lblCodigoTransferencia.AutoSize = true;
-            this._lblCodigoTransferencia.Location = new System.Drawing.Point(100, 210);
+            this._lblCodigoTransferencia.Location = new System.Drawing.Point(13, 200);
             this._lblCodigoTransferencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblCodigoTransferencia.Name = "_lblCodigoTransferencia";
             this._lblCodigoTransferencia.Size = new System.Drawing.Size(144, 17);
@@ -78,7 +78,7 @@ namespace TPEstudio
             // _lblPeriodo
             // 
             this._lblPeriodo.AutoSize = true;
-            this._lblPeriodo.Location = new System.Drawing.Point(100, 266);
+            this._lblPeriodo.Location = new System.Drawing.Point(13, 262);
             this._lblPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblPeriodo.Name = "_lblPeriodo";
             this._lblPeriodo.Size = new System.Drawing.Size(57, 17);
@@ -88,7 +88,7 @@ namespace TPEstudio
             // _lblBruto
             // 
             this._lblBruto.AutoSize = true;
-            this._lblBruto.Location = new System.Drawing.Point(100, 321);
+            this._lblBruto.Location = new System.Drawing.Point(13, 321);
             this._lblBruto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblBruto.Name = "_lblBruto";
             this._lblBruto.Size = new System.Drawing.Size(42, 17);
@@ -98,7 +98,7 @@ namespace TPEstudio
             // _lblDescuentos
             // 
             this._lblDescuentos.AutoSize = true;
-            this._lblDescuentos.Location = new System.Drawing.Point(100, 379);
+            this._lblDescuentos.Location = new System.Drawing.Point(13, 378);
             this._lblDescuentos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._lblDescuentos.Name = "_lblDescuentos";
             this._lblDescuentos.Size = new System.Drawing.Size(83, 17);
@@ -108,7 +108,7 @@ namespace TPEstudio
             // txtIDLIQUIDACIÓN
             // 
             this.txtIDLIQUIDACIÓN.Enabled = false;
-            this.txtIDLIQUIDACIÓN.Location = new System.Drawing.Point(497, 80);
+            this.txtIDLIQUIDACIÓN.Location = new System.Drawing.Point(620, 81);
             this.txtIDLIQUIDACIÓN.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDLIQUIDACIÓN.Name = "txtIDLIQUIDACIÓN";
             this.txtIDLIQUIDACIÓN.Size = new System.Drawing.Size(79, 22);
@@ -116,7 +116,7 @@ namespace TPEstudio
             // 
             // txtbruto
             // 
-            this.txtbruto.Location = new System.Drawing.Point(432, 321);
+            this.txtbruto.Location = new System.Drawing.Point(564, 316);
             this.txtbruto.Margin = new System.Windows.Forms.Padding(4);
             this.txtbruto.Name = "txtbruto";
             this.txtbruto.Size = new System.Drawing.Size(144, 22);
@@ -124,7 +124,7 @@ namespace TPEstudio
             // 
             // txtDescuentos
             // 
-            this.txtDescuentos.Location = new System.Drawing.Point(432, 375);
+            this.txtDescuentos.Location = new System.Drawing.Point(564, 373);
             this.txtDescuentos.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescuentos.Name = "txtDescuentos";
             this.txtDescuentos.Size = new System.Drawing.Size(144, 22);
@@ -156,14 +156,14 @@ namespace TPEstudio
             // 
             this.cmbEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(204, 140);
+            this.cmbEmpleado.Location = new System.Drawing.Point(91, 140);
             this.cmbEmpleado.Name = "cmbEmpleado";
-            this.cmbEmpleado.Size = new System.Drawing.Size(372, 24);
+            this.cmbEmpleado.Size = new System.Drawing.Size(608, 24);
             this.cmbEmpleado.TabIndex = 16;
             // 
             // txtCodigoTransferencia
             // 
-            this.txtCodigoTransferencia.Location = new System.Drawing.Point(311, 210);
+            this.txtCodigoTransferencia.Location = new System.Drawing.Point(443, 200);
             this.txtCodigoTransferencia.Name = "txtCodigoTransferencia";
             this.txtCodigoTransferencia.Size = new System.Drawing.Size(265, 22);
             this.txtCodigoTransferencia.TabIndex = 17;
@@ -172,7 +172,7 @@ namespace TPEstudio
             // 
             this.cmbPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPeriodo.FormattingEnabled = true;
-            this.cmbPeriodo.Location = new System.Drawing.Point(432, 259);
+            this.cmbPeriodo.Location = new System.Drawing.Point(564, 255);
             this.cmbPeriodo.Name = "cmbPeriodo";
             this.cmbPeriodo.Size = new System.Drawing.Size(144, 24);
             this.cmbPeriodo.TabIndex = 18;
@@ -181,7 +181,7 @@ namespace TPEstudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 554);
+            this.ClientSize = new System.Drawing.Size(767, 593);
             this.Controls.Add(this.cmbPeriodo);
             this.Controls.Add(this.txtCodigoTransferencia);
             this.Controls.Add(this.cmbEmpleado);

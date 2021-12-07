@@ -94,5 +94,10 @@ namespace TPEstudio
             lstLiquidacionporcategoria.DataSource = null;
             lstLiquidacionporcategoria.DataSource = lst;
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

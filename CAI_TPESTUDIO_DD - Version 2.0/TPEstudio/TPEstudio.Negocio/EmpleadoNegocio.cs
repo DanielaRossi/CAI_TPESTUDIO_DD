@@ -30,11 +30,11 @@ namespace TPEstudio.Negocio
             try
             {
                 //_liquidaciones = _liquidacionesMapper.Traer();
-                //_empleado = _empleadoMapper.Traer();
+                _empleado = _empleadoMapper.Traer();
                 //_categorias = _categoriaMapper.Traer();
 
 
-                foreach (var empleado in _empleadoMapper.Traer())
+                foreach (var empleado in _empleado)
                 {
                     //    foreach (var liquidaciones in _liquidaciones)
                     //    {

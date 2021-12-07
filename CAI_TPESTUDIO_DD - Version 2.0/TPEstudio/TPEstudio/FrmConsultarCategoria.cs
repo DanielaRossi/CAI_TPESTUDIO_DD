@@ -48,7 +48,7 @@ namespace TPEstudio
         {
             cmbLiquidación.DataSource = null;
             cmbLiquidación.DataSource = _liquidacionesNegocio.TraerTodas();
-            cmbLiquidación.DisplayMember = "Id";
+            cmbLiquidación.DisplayMember = "Mostrar";
             cmbLiquidación.ValueMember = "Id";
             
         }
@@ -73,7 +73,7 @@ namespace TPEstudio
                     if (liq.Empleados.Categorias.Id.Equals(l.Empleados.Categorias.Id))
                     {
                         
-                        txtResultado.Text = liq.Empleados.Categorias.Id.ToString();
+                        txtResultado.Text = liq.Empleados.Categorias.NombreyConvenio.ToString();
                     }
                 }
 

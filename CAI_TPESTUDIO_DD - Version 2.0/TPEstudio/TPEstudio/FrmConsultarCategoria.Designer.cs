@@ -33,7 +33,6 @@ namespace TPEstudio
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.cmbLiquidación = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,33 +70,24 @@ namespace TPEstudio
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 46);
+            this.label2.Location = new System.Drawing.Point(12, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 17);
+            this.label2.Size = new System.Drawing.Size(211, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Consultar categoria por id de liquidación";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Seleccione el id de la liquidación";
+            this.label2.Text = "Buscar categoria por liquidación";
             // 
             // cmbLiquidación
             // 
             this.cmbLiquidación.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLiquidación.FormattingEnabled = true;
-            this.cmbLiquidación.Location = new System.Drawing.Point(322, 81);
+            this.cmbLiquidación.Location = new System.Drawing.Point(12, 73);
             this.cmbLiquidación.Name = "cmbLiquidación";
-            this.cmbLiquidación.Size = new System.Drawing.Size(121, 24);
+            this.cmbLiquidación.Size = new System.Drawing.Size(776, 24);
             this.cmbLiquidación.TabIndex = 5;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(506, 84);
+            this.button2.Location = new System.Drawing.Point(713, 31);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
@@ -108,7 +98,7 @@ namespace TPEstudio
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 139);
+            this.label4.Location = new System.Drawing.Point(438, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 7;
@@ -117,9 +107,9 @@ namespace TPEstudio
             // txtResultado
             // 
             this.txtResultado.Enabled = false;
-            this.txtResultado.Location = new System.Drawing.Point(184, 139);
+            this.txtResultado.Location = new System.Drawing.Point(557, 125);
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(397, 22);
+            this.txtResultado.Size = new System.Drawing.Size(231, 22);
             this.txtResultado.TabIndex = 8;
             // 
             // FrmConsultarCategoria
@@ -131,7 +121,6 @@ namespace TPEstudio
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbLiquidación);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -150,7 +139,6 @@ namespace TPEstudio
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbLiquidación;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;

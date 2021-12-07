@@ -29,8 +29,9 @@ namespace TPEstudio.Negocio
         {
             
             _empleados = _empleadoNegocio.TraerTodos();
+            _liquidaciones = liquidacionesMapper.Traer();
 
-            foreach (var liquidaciones in liquidacionesMapper.Traer())
+            foreach (var liquidaciones in _liquidaciones)
             {
                 foreach (var empleado in _empleados)
                 {
